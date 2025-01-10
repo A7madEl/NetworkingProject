@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eBook_Library_Service.Models
 {
@@ -27,6 +28,8 @@ namespace eBook_Library_Service.Models
         public decimal Price { get; set; } // Store the price at the time of purchase
 
         [Required]
-        public DateTime PurchaseDate { get; set; } = DateTime.UtcNow; // Store the date of purchase
+        public DateTime PurchaseDate { get; set; } = DateTime.UtcNow;
+        [ForeignKey("BookId")]
+        public virtual Book Book { get; set; }
     }
 }

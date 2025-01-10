@@ -21,6 +21,7 @@
                             <th>Year Published</th>
                             <th>Price</th>
                             <th>Purchase Date</th>
+                            <th>Download</th> <!-- New column for download links -->
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +34,27 @@
                                 <td>@purchase.YearPublished</td>
                                 <td>@purchase.Price.ToString("C")</td>
                                 <td>@purchase.PurchaseDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>
+                                    <td>
+                                    <!-- Download Links -->
+                                        @if (!string.IsNullOrEmpty(purchase.Book.PdfFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = purchase.Book.BookId, fileType = "pdf" })" class="btn btn-sm btn-primary">PDF</a>
+                                    }
+                                        @if (!string.IsNullOrEmpty(purchase.Book.EpubFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = purchase.Book.BookId, fileType = "epub" })" class="btn btn-sm btn-primary">EPUB</a>
+                                    }
+                                        @if (!string.IsNullOrEmpty(purchase.Book.MobiFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = purchase.Book.BookId, fileType = "mobi" })" class="btn btn-sm btn-primary">MOBI</a>
+                                    }
+                                        @if (!string.IsNullOrEmpty(purchase.Book.F2bFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = purchase.Book.BookId, fileType = "f2b" })" class="btn btn-sm btn-primary">F2B</a>
+                                    }
+                                </td>
+                                </td>
                             </tr>
                         }
                     </tbody>

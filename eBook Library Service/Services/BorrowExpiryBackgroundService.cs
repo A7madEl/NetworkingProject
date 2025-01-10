@@ -1,11 +1,12 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using eBook_Library_Service.Data;
+using eBook_Library_Service.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using eBook_Library_Service.Data;
-using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
 
 public class BorrowExpiryBackgroundService : IHostedService, IDisposable
 {
@@ -22,7 +23,7 @@ public class BorrowExpiryBackgroundService : IHostedService, IDisposable
     public Task StartAsync(CancellationToken cancellationToken)
     {
         _logger.LogInformation("Borrow Expiry Background Service is starting.");
-        _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromMinutes(10)); // Run every 10 minutes
+        _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(10)); // Check every 10 seconds
         return Task.CompletedTask;
     }
 
@@ -40,38 +41,59 @@ public class BorrowExpiryBackgroundService : IHostedService, IDisposable
 
             foreach (var borrow in expiredBorrows)
             {
-                // Update book stock
-                var book = dbContext.Books.Find(borrow.BookId);
-                if (book != null)
+                try
                 {
-                    book.Stock += 1;
-                }
-
-                // Remove the borrow record
-                dbContext.BorrowHistory.Remove(borrow);
-
-                // Notify the next user in the waiting list
-                var waitingList = dbContext.WaitingLists
-                    .Where(w => w.BookId == borrow.BookId)
-                    .OrderBy(w => w.Position)
-                    .ToList();
-
-                if (waitingList.Any())
-                {
-                    var nextUser = waitingList.First();
-                    dbContext.WaitingLists.Remove(nextUser);
-
-                    // Notify the next user (e.g., send an email or update their account)
-                    _logger.LogInformation($"Notifying user {nextUser.UserId} that the book {borrow.BookId} is available.");
-
-                    // Update positions of remaining users
-                    foreach (var entry in waitingList.Skip(1))
+                    // Update book stock
+                    var book = dbContext.Books.Find(borrow.BookId);
+                    if (book != null)
                     {
-                        entry.Position -= 1;
+                        book.Stock += 1;
+                        _logger.LogInformation($"Increased stock for book ID {borrow.BookId}.");
                     }
-                }
 
-                dbContext.SaveChanges();
+                    // Remove the borrow record
+                    dbContext.BorrowHistory.Remove(borrow);
+                    _logger.LogInformation($"Removed borrow record ID {borrow.BorrowId}.");
+
+                    // Notify the next user in the waiting list
+                    var waitingList = dbContext.WaitingLists
+                        .Where(w => w.BookId == borrow.BookId)
+                        .OrderBy(w => w.Position)
+                        .ToList();
+
+                    if (waitingList.Any())
+                    {
+                        var nextUser = waitingList.First();
+
+                        // Assign the book to the next user in the waiting list
+                        var newBorrow = new BorrowHistory
+                        {
+                            UserId = nextUser.UserId,
+                            BookId = nextUser.BookId,
+                            BorrowDate = DateTime.UtcNow,
+                            ReturnDate = DateTime.UtcNow.AddMinutes(10) // Set the return date (e.g., 10 minutes from now)
+                        };
+
+                        dbContext.BorrowHistory.Add(newBorrow);
+                        _logger.LogInformation($"Assigned book ID {borrow.BookId} to user {nextUser.UserId}.");
+
+                        // Remove the user from the waiting list
+                        dbContext.WaitingLists.Remove(nextUser);
+                        _logger.LogInformation($"Removed user {nextUser.UserId} from the waiting list.");
+
+                        // Update positions of remaining users
+                        foreach (var entry in waitingList.Skip(1))
+                        {
+                            entry.Position -= 1;
+                        }
+                    }
+
+                    dbContext.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"Error processing borrow record ID {borrow.BorrowId}.");
+                }
             }
         }
     }

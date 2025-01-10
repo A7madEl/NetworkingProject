@@ -509,6 +509,10 @@
       "PackagePath": "staticwebassets\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\297e61c6-f906-41d6-bc2c-2fd8e6d4b699_81m9fP+LIPL._SY522_.jpg",
+      "PackagePath": "staticwebassets\\images\\297e61c6-f906-41d6-bc2c-2fd8e6d4b699_81m9fP+LIPL._SY522_.jpg"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\2feba764-cea6-410e-83d6-ee62f7975e68_Good Omens.webp",
       "PackagePath": "staticwebassets\\images\\2feba764-cea6-410e-83d6-ee62f7975e68_Good Omens.webp"
     },
@@ -573,6 +577,10 @@
       "PackagePath": "staticwebassets\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\922e390d-6ffd-4f27-bd50-a57c27b8954b_The Shining.webp",
+      "PackagePath": "staticwebassets\\images\\922e390d-6ffd-4f27-bd50-a57c27b8954b_The Shining.webp"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\BookDefult.png",
       "PackagePath": "staticwebassets\\images\\BookDefult.png"
     },
@@ -595,6 +603,14 @@
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg",
       "PackagePath": "staticwebassets\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\b51e94cb-5df1-42e4-ada9-f030a09a4ee7_Soul.jpg",
+      "PackagePath": "staticwebassets\\images\\b51e94cb-5df1-42e4-ada9-f030a09a4ee7_Soul.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\b6e77e7c-748e-4ed4-93dd-da93fa4ee37f_OIP.jpg",
+      "PackagePath": "staticwebassets\\images\\b6e77e7c-748e-4ed4-93dd-da93fa4ee37f_OIP.jpg"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
@@ -657,6 +673,10 @@
       "PackagePath": "staticwebassets\\uploads\\epub\\225d694e-05e7-48e5-a657-4c69770a4e3a_HideAndSeek.jpg"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\2c0141f2-ddaf-4310-ad17-b2de22ca0544_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\epub\\2c0141f2-ddaf-4310-ad17-b2de22ca0544_1720002777632.pdf"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx"
     },
@@ -697,8 +717,24 @@
       "PackagePath": "staticwebassets\\uploads\\epub\\a3fb896a-e6f3-4a6f-8c95-bba36198e7a3_1720002777632.pdf"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\a40e74f3-db0c-4bc3-83ab-ac5ff75362c2_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\epub\\a40e74f3-db0c-4bc3-83ab-ac5ff75362c2_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\ce8937ca-fbdc-414c-8bb9-c5e323ecff80_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\epub\\ce8937ca-fbdc-414c-8bb9-c5e323ecff80_1720002777632.pdf"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\epub\\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\d3aba2b0-847c-4720-9aab-ef1daac29398_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\epub\\d3aba2b0-847c-4720-9aab-ef1daac29398_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\0361b0d8-daa8-49aa-a5ef-ab0c89121ca9_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\0361b0d8-daa8-49aa-a5ef-ab0c89121ca9_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\0f76b280-19d5-4706-bc97-fefcb1e41110_Good Omens.webp",
@@ -729,6 +765,10 @@
       "PackagePath": "staticwebassets\\uploads\\f2b\\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\7df5ae88-8ada-4fda-9054-efe10b2e167d_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\7df5ae88-8ada-4fda-9054-efe10b2e167d_1720002777632.pdf"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\97df9909-75df-4686-ab4b-1e05f1cff36e_A Game of Thrones.jpg",
       "PackagePath": "staticwebassets\\uploads\\f2b\\97df9909-75df-4686-ab4b-1e05f1cff36e_A Game of Thrones.jpg"
     },
@@ -745,6 +785,10 @@
       "PackagePath": "staticwebassets\\uploads\\f2b\\eb5e0036-c27d-410a-ad30-f2376cb2ac72_1720002777632.pdf"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\ec71d520-4182-4cae-9283-240f66696401_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\ec71d520-4182-4cae-9283-240f66696401_1720002777632.pdf"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\f2b\\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx"
     },
@@ -755,6 +799,14 @@
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\fc8f5340-d58f-44dc-be4f-813b3213a028_1984.webp",
       "PackagePath": "staticwebassets\\uploads\\f2b\\fc8f5340-d58f-44dc-be4f-813b3213a028_1984.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\fe7df9a0-042e-4c6f-ae08-a8a7c0386c79_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\fe7df9a0-042e-4c6f-ae08-a8a7c0386c79_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\1dcd1baf-cd1a-4bb6-94dc-c421c48a8f71_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\1dcd1baf-cd1a-4bb6-94dc-c421c48a8f71_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\303ed48c-16a8-4e9c-b76d-77f5920131dd_Americanah.webp",
@@ -771,6 +823,10 @@
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.docx"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\41b1a295-6637-47c4-99dd-a25c84eb5de8_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\41b1a295-6637-47c4-99dd-a25c84eb5de8_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf",
@@ -797,12 +853,20 @@
       "PackagePath": "staticwebassets\\uploads\\mobi\\bc7dfd3d-1e98-4ab8-92ce-3d5b25167aa7_Skin_Final_Cleaned.docx"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\c366efce-da24-46ca-ae55-63c02fd493e3_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\c366efce-da24-46ca-ae55-63c02fd493e3_1720002777632.pdf"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\ca2574d0-59d3-4033-8afa-7e6f22131c73_Americanah.webp",
       "PackagePath": "staticwebassets\\uploads\\mobi\\ca2574d0-59d3-4033-8afa-7e6f22131c73_Americanah.webp"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\ca6f69a7-91e0-4df0-a558-49d0ecc68741_A Game of Thrones.jpg",
       "PackagePath": "staticwebassets\\uploads\\mobi\\ca6f69a7-91e0-4df0-a558-49d0ecc68741_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\d3a0accd-1318-4e98-b42c-634ef0d3bbc2_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\d3a0accd-1318-4e98-b42c-634ef0d3bbc2_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx",
@@ -819,6 +883,14 @@
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\0b368430-1407-46be-a111-fbf59836abe7_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\pdf\\0b368430-1407-46be-a111-fbf59836abe7_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\13361995-4b61-41c7-bb85-bc96e755401a_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\13361995-4b61-41c7-bb85-bc96e755401a_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\195020f4-906a-43f7-9c8c-dabd0dede36d_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\195020f4-906a-43f7-9c8c-dabd0dede36d_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf",
@@ -855,6 +927,14 @@
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\pdf\\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\7e4c348f-7f1a-4f81-a42c-4208699e8220_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\7e4c348f-7f1a-4f81-a42c-4208699e8220_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\9a8bd6d6-0e72-4229-a07c-2a597065a1d6_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\9a8bd6d6-0e72-4229-a07c-2a597065a1d6_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\a24879a3-2615-477d-9883-4e18e6d43d16_1720002777632.pdf",

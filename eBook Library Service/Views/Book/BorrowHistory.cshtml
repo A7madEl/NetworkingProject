@@ -1,5 +1,4 @@
-﻿﻿
-@model List<eBook_Library_Service.Models.BorrowHistory>
+﻿@model List<eBook_Library_Service.Models.BorrowHistory>
 
 @{
     ViewData["Title"] = "Borrow History";
@@ -30,6 +29,7 @@
                             <th>Borrow Date</th>
                             <th>Return Date</th>
                             <th>Status</th>
+                            <th>Download</th> <!-- New column for download links -->
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +47,25 @@
                                     else
                                     {
                                         <span class="badge bg-danger">Returned</span>
+                                    }
+                                </td>
+                                <td>
+                                    <!-- Download Links -->
+                                    @if (!string.IsNullOrEmpty(borrow.Book.PdfFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = borrow.Book.BookId, fileType = "pdf" })" class="btn btn-sm btn-primary">PDF</a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(borrow.Book.EpubFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = borrow.Book.BookId, fileType = "epub" })" class="btn btn-sm btn-primary">EPUB</a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(borrow.Book.MobiFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = borrow.Book.BookId, fileType = "mobi" })" class="btn btn-sm btn-primary">MOBI</a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(borrow.Book.F2bFilePath))
+                                    {
+                                        <a href="@Url.Action("DownloadFile", "Book", new { bookId = borrow.Book.BookId, fileType = "f2b" })" class="btn btn-sm btn-primary">F2B</a>
                                     }
                                 </td>
                             </tr>
