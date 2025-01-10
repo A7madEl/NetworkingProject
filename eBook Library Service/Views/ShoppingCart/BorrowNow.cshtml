@@ -1,0 +1,65 @@
+﻿@model eBook_Library_Service.Models.Book
+
+@{
+    ViewData["Title"] = "Borrow Now";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Borrow Now: @Model.Title</h2>
+            <hr />
+
+            <!-- Book Details -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Title</h5>
+                    <p class="card-text"><strong>Borrow Price:</strong> @Model.BorrowPrice.ToString("C")</p>
+                    <p class="card-text"><strong>Available Stock:</strong> @Model.Stock</p>
+                </div>
+            </div>
+
+            <!-- Payment Options -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Choose Payment Method</h5>
+                    <hr />
+
+                    <!-- PayPal Payment -->
+                    <div class="mb-4">
+                        <h6>Pay with PayPal</h6>
+                        <form asp-controller="Payment" asp-action="ProcessPayPalBorrow" method="post">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fab fa-paypal"></i> Pay with PayPal
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Stripe Payment -->
+                    <div class="mb-4">
+                        <h6>Pay with Credit Card</h6>
+                        <form asp-controller="Payment" asp-action="ProcessStripeBorrow" method="post">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-credit-card"></i> Pay with Credit Card
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Fake Credit Card Payment -->
+                    <div>
+                        <h6>Fake Credit Card (Testing)</h6>
+                        <form asp-controller="Payment" asp-action="ProcessFakeCreditCardBorrow" method="post">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-credit-card"></i> Fake Credit Card
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

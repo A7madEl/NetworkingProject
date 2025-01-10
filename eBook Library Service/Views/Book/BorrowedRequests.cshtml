@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Borrowed Requests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var waitingListEntries = ViewBag.WaitingListEntries as List<WaitingList>;
+    var bookDetails = ViewBag.BookDetails as Dictionary<int, Book>;
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Your Borrowed Requests</h2>
+            <hr />
+
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success">@TempData["Message"]</div>
+            }
+
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+            }
+
+            @if (waitingListEntries != null && waitingListEntries.Any())
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Join Date</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var entry in waitingListEntries)
+                        {
+                            var book = bookDetails[entry.BookId]; // Fetch book details using BookId
+                            <tr>
+                                <td>@book.Title</td>
+                                <td>@entry.JoinDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@entry.Position</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    You have no borrowed requests.
+                </div>
+            }
+        </div>
+    </div>
+</div>

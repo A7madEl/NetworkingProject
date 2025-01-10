@@ -204,10 +204,11 @@
                         <input type="hidden" name="isForBorrow" value="false" />
                         <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
                     </form>
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                    <form asp-controller="Book" asp-action="BorrowBook" method="post" onsubmit="return checkStockBeforeBorrow(event, @book.BookId, @book.Stock);">
                         <input type="hidden" name="bookId" value="@book.BookId" />
-                        <input type="hidden" name="isForBorrow" value="true" />
-                        <button type="submit" class="btn btn-borrow">Borrow</button>
+                        <button type="submit" class="btn btn-borrow">
+                            <i class="fas fa-book"></i> Borrow
+                        </button>
                     </form>
                     <!-- Buy Now Button -->
                     <form asp-controller="Payment" asp-action="BuyNow" method="get">
@@ -248,12 +249,14 @@
             @if (book.DiscountEndDate.HasValue)
             {
                 <text>
-                    startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
+                        startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
                 </text>
             }
         </script>
     }
 </div>
+
+
 
 <script>
     function searchBooks() {

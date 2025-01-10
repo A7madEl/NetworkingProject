@@ -1,723 +1,871 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\eBook Library Service.bundle.scp.css",
-      "PackagePath": "staticwebassets\\eBook Library Service.bundle.scp.css"
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\eBook Library Service.bundle.scp.css",
+      "PackagePath": "staticwebassets\\eBook Library Service.bnfashdtas.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
       "PackagePath": "staticwebassets\\assets\\css\\account.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
       "PackagePath": "staticwebassets\\assets\\css\\main.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\css\\style.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\css\\popups.css",
+      "PackagePath": "staticwebassets\\assets\\css\\popups.css"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\6920933.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\6920933.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\6920933.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\apple-touch-icon.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\assets\\img\\apple-touch-icon.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-1.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-1.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-2.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-2.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-3.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-3.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-4.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-4.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-5.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-5.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-6.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-6.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-6.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-7.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-7.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-7.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-8.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\clients\\client-8.png",
       "PackagePath": "staticwebassets\\assets\\img\\clients\\client-8.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\cta-bg.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\cta-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\cta-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\dv.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\dv.png",
       "PackagePath": "staticwebassets\\assets\\img\\dv.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\favicon.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\hero-img.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\hero-img.png",
       "PackagePath": "staticwebassets\\assets\\img\\hero-img.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\io.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\io.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\io.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\logo.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\logo.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-2.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-3.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-4.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-5.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-5.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-6.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-6.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-7.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-7.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-7.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-8.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-8.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-8.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-9.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\masonry-portfolio\\masonry-portfolio-9.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\masonry-portfolio\\masonry-portfolio-9.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\app-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\app-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\portfolio\\app-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\books-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\books-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\portfolio\\books-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\branding-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\branding-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\portfolio\\branding-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\product-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\portfolio\\product-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\portfolio\\product-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\services.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\services.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\services.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\skills.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\skills.png",
       "PackagePath": "staticwebassets\\assets\\img\\skills.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\team\\team-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-2.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\team\\team-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-3.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\team\\team-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-4.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\team\\team-4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\team\\team-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-1.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-2.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-3.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-4.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-5.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\testimonials\\testimonials-5.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\img\\why-us.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\img\\why-us.png",
       "PackagePath": "staticwebassets\\assets\\img\\why-us.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
       "PackagePath": "staticwebassets\\assets\\js\\books.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\scss\\Readme.txt",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\js\\popups.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popups.js"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\scss\\Readme.txt",
       "PackagePath": "staticwebassets\\assets\\scss\\Readme.txt"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.cjs.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.cjs.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.cjs.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.esm.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.esm.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.esm.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\aos\\aos.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.scss",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.scss",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.scss"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\prb.txt",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\css\\prb.txt",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\prb.txt"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\glightbox.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\glightbox.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\js\\glightbox.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\js\\glightbox.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\isotope-layout\\isotope.pkgd.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\isotope-layout\\isotope.pkgd.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\isotope-layout\\isotope.pkgd.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\isotope-layout\\isotope.pkgd.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\isotope-layout\\isotope.pkgd.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\isotope-layout\\isotope.pkgd.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\php-email-form\\validate.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\php-email-form\\validate.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\php-email-form\\validate.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.css",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.css"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js.map",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\assets\\vendor\\waypoints\\noframework.waypoints.js",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\assets\\vendor\\waypoints\\noframework.waypoints.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\waypoints\\noframework.waypoints.js"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\forms\\Readme.txt",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\forms\\Readme.txt",
       "PackagePath": "staticwebassets\\forms\\Readme.txt"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\forms\\contact.php",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\forms\\contact.php",
       "PackagePath": "staticwebassets\\forms\\contact.php"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\forms\\newsletter.php",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\forms\\newsletter.php",
       "PackagePath": "staticwebassets\\forms\\newsletter.php"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\092f7834-2f0b-48de-a16b-4c70a803d0fb_1003w-53S3IzrNxvY.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\092f7834-2f0b-48de-a16b-4c70a803d0fb_1003w-53S3IzrNxvY.webp",
       "PackagePath": "staticwebassets\\images\\092f7834-2f0b-48de-a16b-4c70a803d0fb_1003w-53S3IzrNxvY.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
       "PackagePath": "staticwebassets\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
       "PackagePath": "staticwebassets\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\1feed844-09cf-4e40-9ca3-d7dbd18fc82f_1003w-53S3IzrNxvY.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\1feed844-09cf-4e40-9ca3-d7dbd18fc82f_1003w-53S3IzrNxvY.webp",
       "PackagePath": "staticwebassets\\images\\1feed844-09cf-4e40-9ca3-d7dbd18fc82f_1003w-53S3IzrNxvY.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\21d5dca1-d1f2-4837-a868-9bb8a47a3cae_The Da Vinci Code.webp",
+      "PackagePath": "staticwebassets\\images\\21d5dca1-d1f2-4837-a868-9bb8a47a3cae_The Da Vinci Code.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg",
       "PackagePath": "staticwebassets\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\2feba764-cea6-410e-83d6-ee62f7975e68_Good Omens.webp",
+      "PackagePath": "staticwebassets\\images\\2feba764-cea6-410e-83d6-ee62f7975e68_Good Omens.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
       "PackagePath": "staticwebassets\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
       "PackagePath": "staticwebassets\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\4ddfe732-a8cb-4815-9e2c-60b2f47150dc_1003w-53S3IzrNxvY.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\4ddfe732-a8cb-4815-9e2c-60b2f47150dc_1003w-53S3IzrNxvY.webp",
       "PackagePath": "staticwebassets\\images\\4ddfe732-a8cb-4815-9e2c-60b2f47150dc_1003w-53S3IzrNxvY.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\54486c7e-fa38-43ab-be78-4e0080064b04_1003w-53S3IzrNxvY.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\54486c7e-fa38-43ab-be78-4e0080064b04_1003w-53S3IzrNxvY.webp",
       "PackagePath": "staticwebassets\\images\\54486c7e-fa38-43ab-be78-4e0080064b04_1003w-53S3IzrNxvY.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\5899ff3e-8ca4-451c-b69e-ce0607ca3310_1984.webp",
+      "PackagePath": "staticwebassets\\images\\5899ff3e-8ca4-451c-b69e-ce0607ca3310_1984.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg",
       "PackagePath": "staticwebassets\\images\\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\65b08311-51ce-4264-93b5-3e0c09db6bb3_shadow.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\65b08311-51ce-4264-93b5-3e0c09db6bb3_shadow.jpg",
       "PackagePath": "staticwebassets\\images\\65b08311-51ce-4264-93b5-3e0c09db6bb3_shadow.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg",
       "PackagePath": "staticwebassets\\images\\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\6f71e3f7-2d43-4ffe-b030-8e1520d5158d_1003w-53S3IzrNxvY.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\6f71e3f7-2d43-4ffe-b030-8e1520d5158d_1003w-53S3IzrNxvY.webp",
       "PackagePath": "staticwebassets\\images\\6f71e3f7-2d43-4ffe-b030-8e1520d5158d_1003w-53S3IzrNxvY.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\70f97c39-d49a-497b-810f-9509216e94d9_The Handmaid's Tale.webp",
+      "PackagePath": "staticwebassets\\images\\70f97c39-d49a-497b-810f-9509216e94d9_The Handmaid's Tale.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
       "PackagePath": "staticwebassets\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg",
       "PackagePath": "staticwebassets\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg",
       "PackagePath": "staticwebassets\\images\\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
       "PackagePath": "staticwebassets\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp",
       "PackagePath": "staticwebassets\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\BookDefult.png",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\BookDefult.png",
       "PackagePath": "staticwebassets\\images\\BookDefult.png"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\HideAndSeek.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\HideAndSeek.jpg",
       "PackagePath": "staticwebassets\\images\\HideAndSeek.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\Million.jpg",
       "PackagePath": "staticwebassets\\images\\Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\Soul.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\Soul.jpg",
       "PackagePath": "staticwebassets\\images\\Soul.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
       "PackagePath": "staticwebassets\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg",
       "PackagePath": "staticwebassets\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
       "PackagePath": "staticwebassets\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
       "PackagePath": "staticwebassets\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\d7f2c961-70f7-4c0a-a48d-49cd7ded6abc_Harry Potter and the Philosopher's Stone.jpg",
+      "PackagePath": "staticwebassets\\images\\d7f2c961-70f7-4c0a-a48d-49cd7ded6abc_Harry Potter and the Philosopher's Stone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\d9d5d9c3-d324-4557-8d48-471f176a6269_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\images\\d9d5d9c3-d324-4557-8d48-471f176a6269_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
       "PackagePath": "staticwebassets\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
       "PackagePath": "staticwebassets\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\e1a3a7f2-1d77-4ff8-ae1c-c10172bde3d8_shopping (1).webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\e1a3a7f2-1d77-4ff8-ae1c-c10172bde3d8_shopping (1).webp",
       "PackagePath": "staticwebassets\\images\\e1a3a7f2-1d77-4ff8-ae1c-c10172bde3d8_shopping (1).webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\e1b167dc-245d-422b-a3a3-067911c3f652_images.jpg",
+      "PackagePath": "staticwebassets\\images\\e1b167dc-245d-422b-a3a3-067911c3f652_images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
       "PackagePath": "staticwebassets\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\f71b74d4-37cc-41c4-9727-dd1a35dacf42_Million.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\f71b74d4-37cc-41c4-9727-dd1a35dacf42_Million.jpg",
       "PackagePath": "staticwebassets\\images\\f71b74d4-37cc-41c4-9727-dd1a35dacf42_Million.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\f939262e-f008-4b7c-b987-d64a3c5abc77_Soul.jpg",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\f939262e-f008-4b7c-b987-d64a3c5abc77_Soul.jpg",
       "PackagePath": "staticwebassets\\images\\f939262e-f008-4b7c-b987-d64a3c5abc77_Soul.jpg"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\images\\faa1d1e7-2046-4060-a075-6b5b61c56887_shopping.webp",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\images\\faa1d1e7-2046-4060-a075-6b5b61c56887_shopping.webp",
       "PackagePath": "staticwebassets\\images\\faa1d1e7-2046-4060-a075-6b5b61c56887_shopping.webp"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\0a1a2e80-9b50-44b1-a5bc-ccb591bb2cd0_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\0a1a2e80-9b50-44b1-a5bc-ccb591bb2cd0_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\epub\\0a1a2e80-9b50-44b1-a5bc-ccb591bb2cd0_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\1913b681-a9f1-42aa-93ab-9cdf493628c7_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\epub\\1913b681-a9f1-42aa-93ab-9cdf493628c7_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\225d694e-05e7-48e5-a657-4c69770a4e3a_HideAndSeek.jpg",
+      "PackagePath": "staticwebassets\\uploads\\epub\\225d694e-05e7-48e5-a657-4c69770a4e3a_HideAndSeek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\35000213-ebda-4bfd-aec7-9a8de6522197_1Norwegian Wood.webp",
+      "PackagePath": "staticwebassets\\uploads\\epub\\35000213-ebda-4bfd-aec7-9a8de6522197_1Norwegian Wood.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\epub\\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\7905521a-ced8-4a5a-ab0f-e7b0931c5b26_HW2-2023.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\7905521a-ced8-4a5a-ab0f-e7b0931c5b26_HW2-2023.pdf",
       "PackagePath": "staticwebassets\\uploads\\epub\\7905521a-ced8-4a5a-ab0f-e7b0931c5b26_HW2-2023.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\968b858b-983a-4ba5-9654-f62a05e13129_HW2-2023.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\7d06ccc8-8e2d-4d1b-9ffe-9d10ff00370a_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\epub\\7d06ccc8-8e2d-4d1b-9ffe-9d10ff00370a_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\82849920-9c3a-49da-a21e-9bb6d469936d_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\epub\\82849920-9c3a-49da-a21e-9bb6d469936d_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\968b858b-983a-4ba5-9654-f62a05e13129_HW2-2023.pdf",
       "PackagePath": "staticwebassets\\uploads\\epub\\968b858b-983a-4ba5-9654-f62a05e13129_HW2-2023.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\a1bcad63-6f18-443d-ac5e-8b5efa844205_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\epub\\a1bcad63-6f18-443d-ac5e-8b5efa844205_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\epub\\a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\epub\\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\a3fb896a-e6f3-4a6f-8c95-bba36198e7a3_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\epub\\a3fb896a-e6f3-4a6f-8c95-bba36198e7a3_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\epub\\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\epub\\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\0f7d1d3a-4335-41ff-b1ce-136d83ecd6b8_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\0f76b280-19d5-4706-bc97-fefcb1e41110_Good Omens.webp",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\0f76b280-19d5-4706-bc97-fefcb1e41110_Good Omens.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\0f7d1d3a-4335-41ff-b1ce-136d83ecd6b8_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\f2b\\0f7d1d3a-4335-41ff-b1ce-136d83ecd6b8_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\41f3968d-7048-4a04-93fa-d7794cb8ae86_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\160020ec-dd45-4fad-8bde-f3811fd4e996_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\160020ec-dd45-4fad-8bde-f3811fd4e996_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\41f3968d-7048-4a04-93fa-d7794cb8ae86_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\f2b\\41f3968d-7048-4a04-93fa-d7794cb8ae86_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\476c09e3-d27f-498e-a96f-a1a7636c2933_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\476c09e3-d27f-498e-a96f-a1a7636c2933_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\f2b\\476c09e3-d27f-498e-a96f-a1a7636c2933_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\657d2111-ac03-434c-8b82-71108dbcd40c_1Norwegian Wood.webp",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\657d2111-ac03-434c-8b82-71108dbcd40c_1Norwegian Wood.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf",
       "PackagePath": "staticwebassets\\uploads\\f2b\\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\97df9909-75df-4686-ab4b-1e05f1cff36e_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\97df9909-75df-4686-ab4b-1e05f1cff36e_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\f2b\\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\f2b\\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\eb5e0036-c27d-410a-ad30-f2376cb2ac72_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\eb5e0036-c27d-410a-ad30-f2376cb2ac72_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\f2b\\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\f68b55e4-44fe-4d9b-9619-29cda585ae0a_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\f68b55e4-44fe-4d9b-9619-29cda585ae0a_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\f2b\\fc8f5340-d58f-44dc-be4f-813b3213a028_1984.webp",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\fc8f5340-d58f-44dc-be4f-813b3213a028_1984.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\303ed48c-16a8-4e9c-b76d-77f5920131dd_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\303ed48c-16a8-4e9c-b76d-77f5920131dd_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\33e1aa65-6eed-4c45-932b-27be887aeb59_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\33e1aa65-6eed-4c45-932b-27be887aeb59_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\mobi\\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\7f17d610-b0fd-4476-a5b4-1797fbdace06_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\7f17d610-b0fd-4476-a5b4-1797fbdace06_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\7f17d610-b0fd-4476-a5b4-1797fbdace06_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\82d7ba36-a5bc-44f5-9039-c730a480f67d_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\82d7ba36-a5bc-44f5-9039-c730a480f67d_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\b641aa15-ee5c-41a7-8b5f-fffb93cb1a4d_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\b641aa15-ee5c-41a7-8b5f-fffb93cb1a4d_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\mobi\\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\bc7dfd3d-1e98-4ab8-92ce-3d5b25167aa7_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\bc7dfd3d-1e98-4ab8-92ce-3d5b25167aa7_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\bc7dfd3d-1e98-4ab8-92ce-3d5b25167aa7_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\ca2574d0-59d3-4033-8afa-7e6f22131c73_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\ca2574d0-59d3-4033-8afa-7e6f22131c73_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\ca6f69a7-91e0-4df0-a558-49d0ecc68741_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\ca6f69a7-91e0-4df0-a558-49d0ecc68741_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\mobi\\e335e2fb-c875-4b3f-b757-f0546c1160a1_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\e335e2fb-c875-4b3f-b757-f0546c1160a1_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\pdf\\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\0b368430-1407-46be-a111-fbf59836abe7_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\0b368430-1407-46be-a111-fbf59836abe7_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf",
       "PackagePath": "staticwebassets\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\27baa4bc-d1ae-4c74-aa91-1c96fdb64345_Skin_Final_Cleaned.docx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\27baa4bc-d1ae-4c74-aa91-1c96fdb64345_Skin_Final_Cleaned.docx",
       "PackagePath": "staticwebassets\\uploads\\pdf\\27baa4bc-d1ae-4c74-aa91-1c96fdb64345_Skin_Final_Cleaned.docx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\28c1ec5e-4b74-4140-bf49-75db11e5daf5_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\28c1ec5e-4b74-4140-bf49-75db11e5daf5_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\36e05d68-1a0e-4dc0-bab3-8dc167eb1c40_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\36e05d68-1a0e-4dc0-bab3-8dc167eb1c40_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\42fed17d-028d-4261-8a78-9ebf13a8a64e_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\42fed17d-028d-4261-8a78-9ebf13a8a64e_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\467366b6-6fd2-4bf7-aa4e-bc1e2517718e_A Game of Thrones.jpg",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\467366b6-6fd2-4bf7-aa4e-bc1e2517718e_A Game of Thrones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\77b83f77-7986-47b7-a44a-ebd021658dc3_Americanah.webp",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\77b83f77-7986-47b7-a44a-ebd021658dc3_Americanah.webp"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\pdf\\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\a24879a3-2615-477d-9883-4e18e6d43d16_1720002777632.pdf",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\a24879a3-2615-477d-9883-4e18e6d43d16_1720002777632.pdf"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\pdf\\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf"
     },
     {
-      "Id": "C:\\Users\\ibrah\\Desktop\\yuy\\eBook Library Service\\wwwroot\\uploads\\pdf\\f4db4f45-6ff0-451a-a378-d9bbd65ff39c_Skin11.pptx",
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\ibrahim\\eBook Library Service\\wwwroot\\uploads\\pdf\\f4db4f45-6ff0-451a-a378-d9bbd65ff39c_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\pdf\\f4db4f45-6ff0-451a-a378-d9bbd65ff39c_Skin11.pptx"
     },
     {
@@ -731,6 +879,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.eBook Library Service.props",
       "PackagePath": "buildTransitive\\eBook Library Service.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.eBook Library Service.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.eBook Library Service.Microsoft.AspNetCore.StaticWebAssets.props",

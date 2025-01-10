@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace eBook_Library_Service.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class CreateTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -126,6 +126,26 @@ namespace eBook_Library_Service.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Contacts", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PurchaseHistories",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BookId = table.Column<int>(type: "int", nullable: false),
+                    BookTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    YearPublished = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PurchaseDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PurchaseHistories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -278,6 +298,62 @@ namespace eBook_Library_Service.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BorrowHistory",
+                columns: table => new
+                {
+                    BorrowId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    BookId = table.Column<int>(type: "int", nullable: false),
+                    BorrowDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ReturnDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BorrowHistory", x => x.BorrowId);
+                    table.ForeignKey(
+                        name: "FK_BorrowHistory_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BorrowHistory_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
+                        principalColumn: "BookId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "WaitingLists",
+                columns: table => new
+                {
+                    WaitingId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    BookId = table.Column<int>(type: "int", nullable: false),
+                    JoinDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Position = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WaitingLists", x => x.WaitingId);
+                    table.ForeignKey(
+                        name: "FK_WaitingLists_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_WaitingLists_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
+                        principalColumn: "BookId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ShoppingCartItems",
                 columns: table => new
                 {
@@ -380,6 +456,16 @@ namespace eBook_Library_Service.Migrations
                 column: "AuthorId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BorrowHistory_BookId",
+                table: "BorrowHistory",
+                column: "BookId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BorrowHistory_UserId",
+                table: "BorrowHistory",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ShoppingCartItems_BookId",
                 table: "ShoppingCartItems",
                 column: "BookId");
@@ -392,6 +478,16 @@ namespace eBook_Library_Service.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_ShoppingCarts_UserId",
                 table: "ShoppingCarts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WaitingLists_BookId",
+                table: "WaitingLists",
+                column: "BookId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WaitingLists_UserId",
+                table: "WaitingLists",
                 column: "UserId");
         }
 
@@ -417,13 +513,22 @@ namespace eBook_Library_Service.Migrations
                 name: "BookAuthors");
 
             migrationBuilder.DropTable(
+                name: "BorrowHistory");
+
+            migrationBuilder.DropTable(
                 name: "BorrowRequests");
 
             migrationBuilder.DropTable(
                 name: "Contacts");
 
             migrationBuilder.DropTable(
+                name: "PurchaseHistories");
+
+            migrationBuilder.DropTable(
                 name: "ShoppingCartItems");
+
+            migrationBuilder.DropTable(
+                name: "WaitingLists");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -432,10 +537,10 @@ namespace eBook_Library_Service.Migrations
                 name: "Authors");
 
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "ShoppingCarts");
 
             migrationBuilder.DropTable(
-                name: "ShoppingCarts");
+                name: "Books");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

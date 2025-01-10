@@ -1,0 +1,63 @@
+﻿/* Popup Styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000; /* Sit on top */
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 30%; /* Adjust width as needed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+    .popup-content h3 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .popup-content p {
+        margin: 15px 0;
+        color: #555;
+    }
+
+    .popup-content button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+#joinWaitingListBtn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#cancelWaitingListBtn, #closeBorrowingLimitBtn, #closeErrorPopupBtn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover {
+        color: #000;
+    }

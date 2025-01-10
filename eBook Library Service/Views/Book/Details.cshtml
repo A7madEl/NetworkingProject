@@ -260,7 +260,7 @@
                     </form>
 
                     <!-- Borrow -->
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                    <form asp-controller="Book" asp-action="BorrowBook" method="post" data-ajax="true">
                         <input type="hidden" name="bookId" value="@Model.BookId" />
                         <input type="hidden" name="isForBorrow" value="true" />
                         <button type="submit" class="btn btn-borrow">
