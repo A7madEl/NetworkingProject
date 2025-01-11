@@ -17,6 +17,7 @@ namespace eBook_Library_Service.Controllers
         private readonly ILogger<BookController> _logger;
         private readonly IWebHostEnvironment _webHostingEnvironment;
 
+
         public BookController(AppDbContext context, IWebHostEnvironment webHostingEnvironment, ILogger<BookController> logger)
         {
             _books = new Repository<Book>(context);
@@ -55,6 +56,17 @@ namespace eBook_Library_Service.Controllers
      bool onSale = false)
         {
             var bookList = await _books.GetAllsync();
+            var bookIds = bookList.Select(b => b.BookId).ToList();
+            var ratings = await _context.BookRatings
+        .Where(br => bookIds.Contains(br.BookId))
+        .Include(br => br.User) // Include user who submitted the rating
+        .ToListAsync();
+
+            // Attach ratings to the corresponding books
+            foreach (var book in bookList)
+            {
+                book.BookRatings = ratings.Where(r => r.BookId == book.BookId).ToList();
+            }
 
             // Apply discounts
             foreach (var book in bookList)
@@ -350,25 +362,33 @@ namespace eBook_Library_Service.Controllers
             }
         }
 
-        // Book Details
+        [HttpGet]
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var book = await _books.GetByIdAsync(id, new QueryOptions<Book>
-            {
-                Includes = "BookAuthors.Author",
-                Where = b => b.BookId == id
-            });
+            var book = await _context.Books
+                .Include(b => b.BookRatings) // Ensure BookRatings are included
+                .Include(b => b.BookAuthors)
+                .ThenInclude(ba => ba.Author)
+                .FirstOrDefaultAsync(b => b.BookId == id);
 
             if (book == null)
             {
                 return NotFound();
             }
 
+            // Debugging: Check if BookRatings is null
+            if (book.BookRatings == null)
+            {
+                Console.WriteLine("BookRatings is null for book ID: " + book.BookId);
+            }
+            else
+            {
+                Console.WriteLine("BookRatings count: " + book.BookRatings.Count);
+            }
+
             return View(book);
         }
-
-        // Helper Methods
         private async Task<IEnumerable<string>> GetCategories()
         {
             var categories = await _books.GetAllsync();
@@ -527,7 +547,7 @@ namespace eBook_Library_Service.Controllers
             }
             else
             {
-                // If the book is not available, set TempData to show the waiting list dialog
+                
                 TempData["ShowWaitingListPopup"] = true;
                 TempData["BookId"] = bookId;
                 TempData["BookTitle"] = book.Title;
@@ -856,6 +876,54 @@ namespace eBook_Library_Service.Controllers
             // Serve the file for download
             var fileStream = new FileStream(fullPath, FileMode.Open, FileAccess.Read);
             return File(fileStream, "application/octet-stream", Path.GetFileName(filePath));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> SubmitRating(int bookId, int rating, string feedback)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            // Check if the user has borrowed or bought the book
+            var hasPurchased = await _context.PurchaseHistories.AnyAsync(p => p.UserId == userId && p.BookId == bookId);
+            var hasBorrowed = await _context.BorrowHistory.AnyAsync(b => b.UserId == userId && b.BookId == bookId);
+
+            if (!hasPurchased && !hasBorrowed)
+            {
+                TempData["ErrorMessage"] = "You need to borrow or buy the book before rating it.";
+                return RedirectToAction("Details", new { id = bookId });
+            }
+
+            // Proceed with rating submission if validation passes
+            var bookRating = new BookRating
+            {
+                BookId = bookId,
+                UserId = userId,
+                Rating = rating,
+                Feedback = feedback,
+                RatingDate = DateTime.UtcNow
+            };
+
+            _context.BookRatings.Add(bookRating);
+            await _context.SaveChangesAsync();
+
+            // Reload the book with its related data before redirecting
+            var book = await _context.Books
+                .Include(b => b.BookRatings) // Ensure BookRatings are included
+                .Include(b => b.BookAuthors)
+                .ThenInclude(ba => ba.Author)
+                .FirstOrDefaultAsync(b => b.BookId == bookId);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return RedirectToAction("Details", new { id = bookId });
         }
     }
 }

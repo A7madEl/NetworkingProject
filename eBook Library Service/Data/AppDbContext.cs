@@ -17,6 +17,7 @@ namespace eBook_Library_Service.Data
         public DbSet<PurchaseHistory> PurchaseHistories { get; set; }
         public DbSet<BorrowHistory> BorrowHistory { get; set; }
         public DbSet<WaitingList> WaitingLists { get; set; }
+        public DbSet<BookRating> BookRatings { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

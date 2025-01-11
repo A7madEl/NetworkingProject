@@ -4,6 +4,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+
+
+@functions {
+    public decimal CalculateAverageRating(ICollection<BookRating> ratings)
+    {
+        if (ratings == null || !ratings.Any())
+        {
+            return 0; // Return 0 if there are no ratings
+        }
+        return (decimal)ratings.Average(r => r.Rating);
+    }
+}
+
 <style>
     /* Modern and Elegant Styles */
     .book-details-container {
@@ -189,6 +209,119 @@
         gap: 0.5rem;
         margin-top: 1.5rem;
     }
+
+    /* Ratings Section Styles */
+    .ratings-section {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .ratings-section h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+    .rating-item {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+        .rating-item strong {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .rating-item p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .rating-item small {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+    .rating-form {
+        margin-top: 1.5rem;
+    }
+
+        .rating-form label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .rating-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .rating-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+            .rating-form button:hover {
+                background-color: #0056b3;
+            }
+
+    /* Star Rating Styles */
+    .stars {
+        font-size: 24px;
+        color: #ffc107;
+        cursor: pointer;
+    }
+
+    .star {
+        display: inline-block;
+        transition: color 0.3s ease;
+    }
+
+        .star.filled {
+            color: #ffc107;
+        }
+
+    .average-rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .feedback-count a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .feedback-count a:hover {
+            text-decoration: underline;
+        }
+
+    .all-feedbacks {
+        margin-top: 20px;
+    }
+
+    .feedback-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
 </style>
 
 <body>
@@ -202,6 +335,34 @@
             <!-- Right Column / Book Details -->
             <div class="book-info">
                 <h1>@Model.Title</h1>
+                <div class="ratings-summary">
+                    <div class="average-rating">
+                        @if (Model.BookRatings != null && Model.BookRatings.Any())
+                        {
+                            var averageRating = CalculateAverageRating(Model.BookRatings);
+                            <span class="stars">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= averageRating)
+                                    {
+                                        <span class="star filled">&#9733;</span> <!-- Filled star -->
+                                    }
+                                    else
+                                    {
+                                        <span class="star">&#9734;</span> <!-- Unfilled star -->
+                                    }
+                                }
+                            </span>
+                            <span class="average">@averageRating.ToString("0.0")</span>
+                        }
+                        else
+                        {
+                            <span class="average">No ratings yet.</span>
+                        }
+                    </div>
+                  
+                </div>
+
                 <p class="book-category"><strong>Category:</strong> @Model.Category</p>
                 <p class="book-publisher"><strong>Publisher:</strong> @Model.Publisher</p>
                 <p class="book-year"><strong>Year Published:</strong> @Model.YearPublished</p>
@@ -214,7 +375,7 @@
                         <ul>
                             @foreach (var author in Model.BookAuthors)
                             {
-                                <li>@author.Author.Name</li>
+                                <li>@author.Author?.Name</li> <!-- Use null-conditional operator -->
                             }
                         </ul>
                     }
@@ -247,7 +408,6 @@
 
                 <!-- Action Buttons -->
                 <div class="action-buttons">
-                    <!-- Buy Direct -->
                     <!-- Buy Now Button -->
                     <form asp-controller="Payment" asp-action="BuyNow" method="get">
                         <input type="hidden" name="bookId" value="@Model.BookId" />
@@ -283,6 +443,73 @@
             </button>
         </div>
     </main>
+
+    <!-- Ratings and Feedback Section -->
+    <div class="ratings-section">
+        <!-- Ratings Summary -->
+        <div class="ratings-summary">
+            <div class="feedback-count">
+                <a href="#" id="show-feedbacks">@Model.BookRatings.Count() Ratings</a>
+            </div>
+        </div>
+        <h3>Ratings and Feedback</h3>
+        <div class="all-feedbacks" id="all-feedbacks" style="display: none;">
+            @if (Model.BookRatings != null && Model.BookRatings.Any())
+            {
+                foreach (var rating in Model.BookRatings)
+                {
+                    <div class="rating-item">
+                        <strong>@(rating.User?.FullName ?? "Unknown User")</strong>
+                        <p>
+                            Rating:
+                            <span class="stars">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= rating.Rating)
+                                    {
+                                        <span class="star filled">&#9733;</span> <!-- Filled star -->
+                                    }
+                                    else
+                                    {
+                                        <span class="star">&#9734;</span> <!-- Unfilled star -->
+                                    }
+                                }
+                            </span>
+                        </p>
+                        <p>@rating.Feedback</p>
+                        <small>@rating.RatingDate.ToString("MMMM dd, yyyy")</small>
+                    </div>
+                }
+            }
+        </div>
+
+        <!-- Rating Submission Form -->
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="rating-form">
+                <h3>Submit Your Rating</h3>
+                <form asp-action="SubmitRating" method="post">
+                    <input type="hidden" name="bookId" value="@Model.BookId" />
+                    <input type="hidden" id="ratingValue" name="rating" value="0" /> <!-- Hidden field to store the selected rating -->
+                    <label for="rating">Rating:</label>
+                    <div class="stars" id="ratingStars">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <span class="star" data-value="@i">&#9734;</span> <!-- Unfilled star -->
+                        }
+                    </div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea name="feedback" class="form-control"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit Rating</button>
+                </form>
+            </div>
+        }
+        else
+        {
+            <p>Please <a asp-controller="Account" asp-action="Login">log in</a> to submit a rating.</p>
+        }
+    </div>
+
     <script>
         // Countdown timer for each book
         function startCountdown(bookId, discountEndDate) {
@@ -313,11 +540,73 @@
         @if (Model.DiscountEndDate.HasValue)
         {
             <text>
-                                    startCountdown(@Model.BookId, Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
+                        startCountdown(@Model.BookId, '@Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
             </text>
         }
-        
-    
+
+        // Toggle feedback visibility
+        document.getElementById('show-feedbacks').addEventListener('click', function (e) {
+            e.preventDefault();
+            var feedbacks = document.getElementById('all-feedbacks');
+            if (feedbacks.style.display === 'none') {
+                feedbacks.style.display = 'block';
+            } else {
+                feedbacks.style.display = 'none';
+            }
+        });
+
+        // Star Rating Interaction
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll("#ratingStars .star");
+            const ratingValue = document.getElementById("ratingValue");
+
+            stars.forEach(star => {
+                star.addEventListener("click", function () {
+                    const value = this.getAttribute("data-value");
+                    ratingValue.value = value; // Update the hidden input field
+
+                    // Highlight selected stars
+                    stars.forEach((s, index) => {
+                        if (index < value) {
+                            s.innerHTML = "&#9733;"; // Filled star
+                            s.classList.add("filled");
+                        } else {
+                            s.innerHTML = "&#9734;"; // Unfilled star
+                            s.classList.remove("filled");
+                        }
+                    });
+                });
+
+                star.addEventListener("mouseover", function () {
+                    const value = this.getAttribute("data-value");
+
+                    // Highlight stars on hover
+                    stars.forEach((s, index) => {
+                        if (index < value) {
+                            s.innerHTML = "&#9733;"; // Filled star
+                            s.classList.add("filled");
+                        } else {
+                            s.innerHTML = "&#9734;"; // Unfilled star
+                            s.classList.remove("filled");
+                        }
+                    });
+                });
+
+                star.addEventListener("mouseout", function () {
+                    const currentRating = ratingValue.value;
+
+                    // Revert to the selected rating after hover
+                    stars.forEach((s, index) => {
+                        if (index < currentRating) {
+                            s.innerHTML = "&#9733;"; // Filled star
+                            s.classList.add("filled");
+                        } else {
+                            s.innerHTML = "&#9734;"; // Unfilled star
+                            s.classList.remove("filled");
+                        }
+                    });
+                });
+            });
+        });
     </script>
-   
 </body>
