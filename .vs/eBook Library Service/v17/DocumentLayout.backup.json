@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\eldad\\source\\repos\\ibrahim\\ebook library service\\views\\shared\\_accountlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\shared\\_accountlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\eldad\\source\\repos\\ibrahim\\ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,20 +38,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_AccountLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\eldad\\source\\repos\\ibrahim\\eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
+              "ToolTip": "C:\\Users\\eldad\\source\\repos\\ibrahim\\eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwFMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-11T23:24:08.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\source\\repos\\ibrahim\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\eldad\\source\\repos\\ibrahim\\eBook Library Service\\Views\\Shared\\_Layout.cshtml*",
               "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAALUAAAAAAAAAAAAAALkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAALsAAAAAAAAAAAAAAK0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-11T23:20:25.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\source\\repos\\ibrahim\\eBook Library Service\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Index.cshtml",

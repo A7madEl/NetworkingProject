@@ -428,6 +428,7 @@ namespace eBook_Library_Service.Controllers
                 throw; // Re-throw the exception to see it in the debugger
             }
         }
+        [Authorize]
         public async Task<IActionResult> BorrowHistory()
         {
             // Get the current user's ID
@@ -554,9 +555,9 @@ namespace eBook_Library_Service.Controllers
 
 
 
-      
 
 
+        [Authorize]
         public async Task<IActionResult> BorrowedRequests()
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;

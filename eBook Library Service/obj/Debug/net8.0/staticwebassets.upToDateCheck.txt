@@ -142,6 +142,7 @@ wwwroot\images\70f97c39-d49a-497b-810f-9509216e94d9_The Handmaid's Tale.webp
 wwwroot\images\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg
 wwwroot\images\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg
 wwwroot\images\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg
+wwwroot\images\872b8063-a981-48b8-bc67-e3ac5b92a7e4_91rcGxdclIL._SY522_.jpg
 wwwroot\images\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg
 wwwroot\images\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp
 wwwroot\images\922e390d-6ffd-4f27-bd50-a57c27b8954b_The Shining.webp
@@ -191,6 +192,7 @@ wwwroot\uploads\epub\a40e74f3-db0c-4bc3-83ab-ac5ff75362c2_1720002777632.pdf
 wwwroot\uploads\epub\ce8937ca-fbdc-414c-8bb9-c5e323ecff80_1720002777632.pdf
 wwwroot\uploads\epub\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx
 wwwroot\uploads\epub\d3aba2b0-847c-4720-9aab-ef1daac29398_1720002777632.pdf
+wwwroot\uploads\epub\ea74b5dd-d181-49c4-8e54-5bc0e575b8d5_1720002777632.pdf
 wwwroot\uploads\f2b\0361b0d8-daa8-49aa-a5ef-ab0c89121ca9_1720002777632.pdf
 wwwroot\uploads\f2b\0f76b280-19d5-4706-bc97-fefcb1e41110_Good Omens.webp
 wwwroot\uploads\f2b\0f7d1d3a-4335-41ff-b1ce-136d83ecd6b8_Skin_Final_Cleaned.docx
@@ -202,6 +204,7 @@ wwwroot\uploads\f2b\476c09e3-d27f-498e-a96f-a1a7636c2933_Skin11.pptx
 wwwroot\uploads\f2b\657d2111-ac03-434c-8b82-71108dbcd40c_1Norwegian Wood.webp
 wwwroot\uploads\f2b\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf
 wwwroot\uploads\f2b\7df5ae88-8ada-4fda-9054-efe10b2e167d_1720002777632.pdf
+wwwroot\uploads\f2b\93c4f199-c20d-4a83-84b5-60edab2e6bd2_1720002777632.pdf
 wwwroot\uploads\f2b\97df9909-75df-4686-ab4b-1e05f1cff36e_A Game of Thrones.jpg
 wwwroot\uploads\f2b\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf
 wwwroot\uploads\f2b\b7070140-0815-4cc8-981d-45441c74f5ce_1720002777632.pdf
@@ -222,6 +225,7 @@ wwwroot\uploads\mobi\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.doc
 wwwroot\uploads\mobi\41b1a295-6637-47c4-99dd-a25c84eb5de8_1720002777632.pdf
 wwwroot\uploads\mobi\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf
 wwwroot\uploads\mobi\6eb4575b-4070-40f0-ba87-3b1091e62075_1720002777632.pdf
+wwwroot\uploads\mobi\795c6613-8315-4c0f-9626-b427888cb668_1720002777632.pdf
 wwwroot\uploads\mobi\7f17d610-b0fd-4476-a5b4-1797fbdace06_Skin11.pptx
 wwwroot\uploads\mobi\82d7ba36-a5bc-44f5-9039-c730a480f67d_A Game of Thrones.jpg
 wwwroot\uploads\mobi\b641aa15-ee5c-41a7-8b5f-fffb93cb1a4d_1720002777632.pdf
@@ -253,6 +257,7 @@ wwwroot\uploads\pdf\47391119-7c30-4246-b8e8-2a626f59b8c3_1720002777632.pdf
 wwwroot\uploads\pdf\77b83f77-7986-47b7-a44a-ebd021658dc3_Americanah.webp
 wwwroot\uploads\pdf\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx
 wwwroot\uploads\pdf\7e4c348f-7f1a-4f81-a42c-4208699e8220_1720002777632.pdf
+wwwroot\uploads\pdf\848ec6f3-d84c-4fc6-99a1-a45d1681ade3_1720002777632.pdf
 wwwroot\uploads\pdf\9a8bd6d6-0e72-4229-a07c-2a597065a1d6_1720002777632.pdf
 wwwroot\uploads\pdf\9f46deff-fded-4da2-8c83-cb54c236d46c_1720002777632.pdf
 wwwroot\uploads\pdf\a24879a3-2615-477d-9883-4e18e6d43d16_1720002777632.pdf
