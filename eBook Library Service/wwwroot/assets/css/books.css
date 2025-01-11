@@ -1,0 +1,206 @@
+﻿/* Book Card Styling */
+.book-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: 200px; /* Smaller card width */
+    text-decoration: none; /* Remove underline from anchor tag */
+    color: inherit; /* Inherit text color */
+}
+
+    .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-card img {
+        width: 100%;
+        height: 150px; /* Smaller image height */
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+    }
+
+.book-card-body {
+    padding: 12px;
+}
+
+.book-card-title {
+    font-size: 1rem; /* Smaller font size */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long titles */
+}
+
+.book-card-description {
+    font-size: 0.75rem; /* Smaller font size */
+    color: #555;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit description to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-card-meta {
+    font-size: 0.75rem; /* Smaller font size */
+    color: #777;
+    margin-bottom: 8px;
+}
+
+    .book-card-meta strong {
+        color: #333;
+    }
+
+.discount-section {
+    background-color: #fff3e6;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.discount-timer {
+    font-size: 0.75rem; /* Smaller font size */
+    color: #e67e22;
+    margin-bottom: 4px;
+}
+
+.discount-percent {
+    font-size: 0.875rem; /* Smaller font size */
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 4px;
+}
+
+.original-price {
+    font-size: 0.75rem; /* Smaller font size */
+    color: #777;
+    text-decoration: line-through;
+}
+
+.pricing-section {
+    margin-bottom: 8px;
+}
+
+.borrow-price, .buy-price {
+    font-size: 0.875rem; /* Smaller font size */
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.book-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.btn-add-to-cart, .btn-borrow, .btn-buy-now {
+    flex: 1;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem; /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+}
+
+    .btn-add-to-cart:hover {
+        background-color: #0056b3;
+    }
+
+.btn-borrow {
+    background-color: #28a745;
+    color: #fff;
+}
+
+    .btn-borrow:hover {
+        background-color: #218838;
+    }
+
+.btn-buy-now {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+    .btn-buy-now:hover {
+        background-color: #c82333;
+    }
+
+/* Filter Container Styling */
+.filter-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.filter-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .filter-toggle:hover {
+        background-color: #0056b3;
+    }
+
+.filter-section {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 40px; /* Adjust based on your layout */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other content */
+    width: 600px; /* Wider to accommodate 2 columns */
+}
+
+.filter-container:hover .filter-section {
+    display: block; /* Show on hover */
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px; /* Space between grid items */
+}
+
+.form-group {
+    margin-bottom: 0; /* Reduce margin for compact layout */
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    grid-column: span 2; /* Make the button span both columns */
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }

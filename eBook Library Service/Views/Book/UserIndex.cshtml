@@ -5,7 +5,7 @@
 }
 
 <style>
-    /* Book Card Styling */
+    /* Book Card Styling (Same as before) */
     .book-card {
         border: 1px solid #e0e0e0;
         border-radius: 12px;
@@ -143,31 +143,152 @@
         .btn-buy-now:hover {
             background-color: #c82333;
         }
+
+    /* Filter Container Styling */
+    .filter-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .filter-toggle {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .filter-toggle:hover {
+            background-color: #0056b3;
+        }
+
+    .filter-section {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 40px; /* Adjust based on your layout */
+        left: 0;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure it appears above other content */
+        width: 600px; /* Wider to accommodate 2 columns */
+    }
+
+    .filter-container:hover .filter-section {
+        display: block; /* Show on hover */
+    }
+
+    .filter-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px; /* Space between grid items */
+    }
+
+    .form-group {
+        margin-bottom: 0; /* Reduce margin for compact layout */
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        grid-column: span 2; /* Make the button span both columns */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
 </style>
 
 <h1>Books</h1>
 
-<!-- Filter Form -->
-<form method="get" asp-action="UserIndex">
-    <div class="form-group">
-        <label for="category">Filter by Category:</label>
-        <select id="category" name="category" class="form-control">
-            <option value="">All</option>
-            @foreach (var category in ViewBag.Categories)
-            {
-                var isSelected = category == ViewBag.SelectedCategory ? "selected" : null;
-                <option value="@category" selected="@isSelected">@category</option>
-            }
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="searchQuery">Search:</label>
-        <input type="text" id="searchQuery" name="searchQuery" class="form-control" value="@ViewBag.SearchQuery" onkeyup="searchBooks()" placeholder="Search for books...">
-    </div>
-    <button type="submit" class="btn btn-primary">Filter</button>
-</form>
+<!-- Filter Container -->
+<div class="filter-container">
+    <button class="filter-toggle">Show Filters</button>
+    <div class="filter-section">
+        <form method="get" asp-action="UserIndex">
+            <div class="filter-grid">
+                <!-- Column 1 -->
+                <div class="form-group">
+                    <label for="category">Filter by Category:</label>
+                    <select id="category" name="category" class="form-control">
+                        <option value="">All</option>
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            var isSelected = category == ViewBag.SelectedCategory ? "selected" : null;
+                            <option value="@category" selected="@isSelected">@category</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="searchQuery">Search:</label>
+                    <input type="text" id="searchQuery" name="searchQuery" class="form-control" value="@ViewBag.SearchQuery" placeholder="Search for books...">
+                </div>
+                <div class="form-group">
+                    <label for="sortBy">Sort By:</label>
+                    <select id="sortBy" name="sortBy" class="form-control">
+                        <option value="">Default</option>
+                        <option value="price_asc" selected="@(ViewBag.SortBy == "price_asc")">Price (Low to High)</option>
+                        <option value="price_desc" selected="@(ViewBag.SortBy == "price_desc")">Price (High to Low)</option>
+                        <option value="popular" selected="@(ViewBag.SortBy == "popular")">Most Popular</option>
+                        <option value="year_asc" selected="@(ViewBag.SortBy == "year_asc")">Year (Oldest to Newest)</option>
+                        <option value="year_desc" selected="@(ViewBag.SortBy == "year_desc")">Year (Newest to Oldest)</option>
+                    </select>
+                </div>
 
-<!-- Books List -->
+                <!-- Column 2 -->
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" class="form-control" value="@ViewBag.Author" placeholder="Filter by author...">
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <input type="text" id="genre" name="genre" class="form-control" value="@ViewBag.Genre" placeholder="Filter by genre...">
+                </div>
+                <div class="form-group">
+                    <label for="method">Method:</label>
+                    <select id="method" name="method" class="form-control">
+                        <option value="">All</option>
+                        <option value="Buy" selected="@(ViewBag.Method == "Buy")">Buy Only</option>
+                        <option value="Borrow" selected="@(ViewBag.Method == "Borrow")">Borrow Only</option>
+                    </select>
+                </div>
+
+                <!-- Row 3 (Spans both columns) -->
+                <div class="form-group">
+                    <label for="minPrice">Min Price:</label>
+                    <input type="number" id="minPrice" name="minPrice" class="form-control" value="@ViewBag.MinPrice" placeholder="Min price...">
+                </div>
+                <div class="form-group">
+                    <label for="maxPrice">Max Price:</label>
+                    <input type="number" id="maxPrice" name="maxPrice" class="form-control" value="@ViewBag.MaxPrice" placeholder="Max price...">
+                </div>
+                <div class="form-group">
+                    <label for="onSale">On Sale:</label>
+                    <input type="checkbox" id="onSale" name="onSale" value="true" checked="@ViewBag.OnSale" />
+                </div>
+
+                <!-- Apply Filters Button -->
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Books List (Same as before) -->
 <div id="bookList" class="book-list mt-4" style="display: flex; flex-wrap: wrap; gap: 16px;">
     @foreach (var book in Model)
     {
@@ -175,7 +296,24 @@
             <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Title" />
             <div class="book-card-body">
                 <h5 class="book-card-title">@book.Title</h5>
+                  <div class="book-card-meta">
+                    
+                    @if (book.BookAuthors != null && book.BookAuthors.Any())
+                    {
+                        <ul>
+                            @foreach (var author in book.BookAuthors)
+                            {
+                                <li>@author.Author.Name</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No authors available</p>
+                    }
+                </div>
                 <p class="book-card-description">@book.Description</p>
+
                 <div class="book-card-meta">
                     <p><strong>Published:</strong> @book.YearPublished</p>
                     <p><strong>Category:</strong> @book.Category</p>
@@ -204,12 +342,16 @@
                         <input type="hidden" name="isForBorrow" value="false" />
                         <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
                     </form>
-                    <form asp-controller="Book" asp-action="BorrowBook" method="post" onsubmit="return checkStockBeforeBorrow(event, @book.BookId, @book.Stock);">
-                        <input type="hidden" name="bookId" value="@book.BookId" />
-                        <button type="submit" class="btn btn-borrow">
-                            <i class="fas fa-book"></i> Borrow
-                        </button>
-                    </form>
+                    @if (!book.IsBuyOnly)
+                    {
+                        <form asp-controller="Book" asp-action="BorrowBook" method="post" onsubmit="return checkStockBeforeBorrow(event, @book.BookId, @book.Stock);">
+                            <input type="hidden" name="bookId" value="@book.BookId" />
+                            <button type="submit" class="btn btn-borrow">
+                                <i class="fas fa-book"></i> Borrow
+                            </button>
+                        </form>
+                    }
+
                     <!-- Buy Now Button -->
                     <form asp-controller="Payment" asp-action="BuyNow" method="get">
                         <input type="hidden" name="bookId" value="@book.BookId" />
@@ -249,27 +391,25 @@
             @if (book.DiscountEndDate.HasValue)
             {
                 <text>
-                        startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
+                            startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
                 </text>
             }
         </script>
     }
 </div>
 
-
-
 <script>
-    function searchBooks() {
-        var searchQuery = document.getElementById('searchQuery').value;
-        var category = document.getElementById('category').value;
+    // Optional: Add smooth transitions or additional logic
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterContainer = document.querySelector(".filter-container");
+        const filterSection = document.querySelector(".filter-section");
 
-        $.ajax({
-            url: '@Url.Action("UserIndex", "Book")',
-            type: 'GET',
-            data: { category: category, searchQuery: searchQuery },
-            success: function (result) {
-                $('#bookList').html(result);
-            }
+        filterContainer.addEventListener("mouseenter", function () {
+            filterSection.style.display = "block";
         });
-    }
+
+        filterContainer.addEventListener("mouseleave", function () {
+            filterSection.style.display = "none";
+        });
+    });
 </script>

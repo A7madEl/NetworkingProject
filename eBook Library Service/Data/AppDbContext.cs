@@ -48,15 +48,7 @@ namespace eBook_Library_Service.Data
                 .WithMany()     // Book can have many WaitingList entries
                 .HasForeignKey(wl => wl.BookId);
 
-            modelBuilder.Entity<BorrowHistory>(entity =>
-            {
-                entity.Property(bh => bh.BorrowDate)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("GETUTCDATE()"); // Ensure BorrowDate is set to UTC time
-
-                entity.Property(bh => bh.ReturnDate)
-                    .HasColumnType("datetime"); // Ensure ReturnDate is stored as datetime
-            });
+            
         
 
 

@@ -30,6 +30,7 @@ namespace eBook_Library_Service.Models
         [Required]
         public DateTime PurchaseDate { get; set; } = DateTime.UtcNow;
         [ForeignKey("BookId")]
+        public string ImageUrl { get; set; }
         public virtual Book Book { get; set; }
     }
 }

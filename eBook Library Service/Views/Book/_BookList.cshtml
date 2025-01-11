@@ -1,79 +1,97 @@
 ﻿@model IEnumerable<eBook_Library_Service.Models.Book>
-
-@foreach (var book in Model)
-{
-    <a asp-action="Details" asp-route-id="@book.BookId">
-        <div class="book-card">
-            <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Description" />
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/books.css" />
+<div id="bookList" class="book-list mt-4" style="display: flex; flex-wrap: wrap; gap: 16px;">
+    @foreach (var book in Model)
+    {
+        <a asp-action="Details" asp-route-id="@book.BookId" class="book-card">
+            <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Title" />
             <div class="book-card-body">
-                <h5>@book.Title</h5>
-                <p>@book.Description</p>
-                <p><strong>Published:</strong> @book.YearPublished</p>
-                <p><strong>Category:</strong> @book.Category</p>
-                <div>
-                    @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
-                    {
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@book.BookId"></span></p>
-                        var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
+                <h5 class="book-card-title">@book.Title</h5>
+                <p class="book-card-description">@book.Description</p>
+                <div class="book-card-meta">
+                    <p><strong>Published:</strong> @book.YearPublished</p>
+                    <p><strong>Category:</strong> @book.Category</p>
+                </div>
 
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span>@book.DiscountPrice.Value% off</span>
-                        </p>
-
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
-                        </p>
-
-                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
-                    }
-                    <div>
-
-                    @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
-                    {
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@book.BookId"></span></p>
-                        var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
-
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span>@book.DiscountPrice.Value% off</span>
-                        </p>
-
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
-                        </p>
-
-                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
-                    }
-                    <div>
-
-                        <p style="color: #28a745;">Borrow price: @book.BorrowPrice.ToString("c")</p>
-                        <p style="color: #28a745;">Buy price: @book.BuyPrice.ToString("c")</p>
+                <!-- Discount Section -->
+                @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
+                {
+                    <div class="discount-section">
+                        <p class="discount-timer">Discount ends in: <span id="countdown-@book.BookId"></span></p>
+                        <p class="discount-percent">@book.DiscountPrice.Value% off</p>
+                        <p class="original-price"><del>@((book.BuyPrice / (1 - (book.DiscountPrice.Value / 100))).ToString("c"))</del></p>
                     </div>
-                    <div class="book-price">
+                }
 
-                            <div class="book-actions">
-                                <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
-                                    <input type="hidden" name="bookId" value="@book.BookId" />
-                                    <input type="hidden" name="isForBorrow" value="false" />
-                                    <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
-                                </form>
-                                <form asp-controller="Book" asp-action="BorrowBook" method="post" data-ajax="true">
-                                    <input type="hidden" name="bookId" value="@book.BookId" />
-                                    <input type="hidden" name="isForBorrow" value="true" />
-                                    <button type="submit" class="btn btn-borrow">
-                                        <i class="fas fa-book"></i> Borrow
-                                    </button>
-                                </form>
-                                <!-- Buy Now Button -->
-                                <form asp-controller="Payment" asp-action="BuyNow" method="get">
-                                    <input type="hidden" name="bookId" value="@book.BookId" />
-                                    <button type="submit" class="btn btn-buy-now">Buy Now</button>
-                                </form>
+                <!-- Pricing Section -->
+                <div class="pricing-section">
+                    <p class="borrow-price"><strong>Borrow Price:</strong> @book.BorrowPrice.ToString("c")</p>
+                    <p class="buy-price"><strong>Buy Price:</strong> @book.BuyPrice.ToString("c")</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="book-actions">
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <input type="hidden" name="isForBorrow" value="false" />
+                        <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
+                    </form>
+                    @if (!book.IsBuyOnly)
+                    {
+                        <form asp-controller="Book" asp-action="BorrowBook" method="post" onsubmit="return checkStockBeforeBorrow(event, @book.BookId, @book.Stock);">
+                            <input type="hidden" name="bookId" value="@book.BookId" />
+                            <button type="submit" class="btn btn-borrow">
+                                <i class="fas fa-book"></i> Borrow
+                            </button>
+                        </form>
+                    }
+
+                    <!-- Buy Now Button -->
+                    <form asp-controller="Payment" asp-action="BuyNow" method="get">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <button type="submit" class="btn btn-buy-now">Buy Now</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </a>
-}
+        </a>
 
+        <script>
+            // Countdown timer for each book
+            function startCountdown(bookId, discountEndDate) {
+                var countdownDate = new Date(discountEndDate).getTime();
 
-                       
+                var x = setInterval(function () {
+                    var now = new Date().getTime();
+                    var distance = countdownDate - now;
 
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the countdown
+                    document.getElementById("countdown-" + bookId).innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+
+                    // If the countdown is finished
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdown-" + bookId).innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            }
+
+            // Start the countdown for each book
+            @if (book.DiscountEndDate.HasValue)
+            {
+                <text>
+                                startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
+                </text>
+            }
+        </script>
+    }
+</div>

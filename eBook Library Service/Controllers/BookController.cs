@@ -43,7 +43,16 @@ namespace eBook_Library_Service.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> UserIndex(string category = null, string searchQuery = null)
+        public async Task<IActionResult> UserIndex(
+     string category = null,
+     string searchQuery = null,
+     string sortBy = null,
+     string author = null,
+     string genre = null,
+     string method = null,
+     decimal? minPrice = null,
+     decimal? maxPrice = null,
+     bool onSale = false)
         {
             var bookList = await _books.GetAllsync();
 
@@ -68,6 +77,7 @@ namespace eBook_Library_Service.Controllers
             {
                 bookList = bookList.Where(b => b.Category == category);
             }
+
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 bookList = bookList.Where(b =>
@@ -76,9 +86,78 @@ namespace eBook_Library_Service.Controllers
                     (!string.IsNullOrEmpty(b.Category) && b.Category.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)));
             }
 
+            if (!string.IsNullOrEmpty(author))
+            {
+                bookList = bookList.Where(b => b.BookAuthors.Any(ba => ba.Author.Name.Contains(author, StringComparison.OrdinalIgnoreCase)));
+            }
+
+            if (!string.IsNullOrEmpty(genre))
+            {
+                bookList = bookList.Where(b => b.Category.Contains(genre, StringComparison.OrdinalIgnoreCase));
+            }
+
+            if (!string.IsNullOrEmpty(method))
+            {
+                if (method == "Buy")
+                {
+                    bookList = bookList.Where(b => b.IsBuyOnly);
+                }
+                else if (method == "Borrow")
+                {
+                    bookList = bookList.Where(b => !b.IsBuyOnly);
+                }
+            }
+
+            if (minPrice.HasValue)
+            {
+                bookList = bookList.Where(b => b.BuyPrice >= minPrice.Value || b.BorrowPrice >= minPrice.Value);
+            }
+
+            if (maxPrice.HasValue)
+            {
+                bookList = bookList.Where(b => b.BuyPrice <= maxPrice.Value || b.BorrowPrice <= maxPrice.Value);
+            }
+
+            if (onSale)
+            {
+                bookList = bookList.Where(b => b.DiscountPrice.HasValue && b.DiscountEndDate.HasValue && b.DiscountEndDate.Value > DateTime.Now);
+            }
+
+            // Apply sorting
+            switch (sortBy)
+            {
+                case "price_asc":
+                    bookList = bookList.OrderBy(b => b.BuyPrice);
+                    break;
+                case "price_desc":
+                    bookList = bookList.OrderByDescending(b => b.BuyPrice);
+                    break;
+                case "popular":
+                    // Assuming you have a way to determine popularity, e.g., number of borrows
+                    bookList = bookList.OrderByDescending(b => b.Stock); // Placeholder for actual popularity logic
+                    break;
+                case "year_asc":
+                    bookList = bookList.OrderBy(b => b.YearPublished);
+                    break;
+                case "year_desc":
+                    bookList = bookList.OrderByDescending(b => b.YearPublished);
+                    break;
+                default:
+                    // Default sorting (e.g., by title)
+                    bookList = bookList.OrderBy(b => b.Title);
+                    break;
+            }
+
             ViewBag.Categories = await GetCategories();
             ViewBag.SelectedCategory = category;
             ViewBag.SearchQuery = searchQuery;
+            ViewBag.SortBy = sortBy;
+            ViewBag.Author = author;
+            ViewBag.Genre = genre;
+            ViewBag.Method = method;
+            ViewBag.MinPrice = minPrice;
+            ViewBag.MaxPrice = maxPrice;
+            ViewBag.OnSale = onSale;
 
             // Return partial view for AJAX requests
             if (IsAjaxRequest(Request))
@@ -177,7 +256,7 @@ namespace eBook_Library_Service.Controllers
                 existingBook.AgeLimit = book.AgeLimit;
                 existingBook.Category = book.Category;
                 existingBook.Formats = book.Formats;
-
+                existingBook.IsBuyOnly = book.IsBuyOnly;
                 // Update file paths if changed
                 if (book.EpubFilePath != null)
                 {
@@ -388,10 +467,10 @@ namespace eBook_Library_Service.Controllers
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (userId == null)
             {
-                return Unauthorized(); // User is not logged in
+                return Unauthorized(); 
             }
 
-            // Fetch the book details
+            
             var book = await _context.Books.FindAsync(bookId);
             if (book == null)
             {
@@ -399,7 +478,7 @@ namespace eBook_Library_Service.Controllers
                 return RedirectToAction("UserIndex", "Book");
             }
 
-            // Check if the user has already borrowed this book
+            
             var isAlreadyBorrowed = await _context.BorrowHistory
                 .AnyAsync(bh => bh.UserId == userId && bh.BookId == bookId);
 
@@ -518,6 +597,7 @@ namespace eBook_Library_Service.Controllers
 
             // Fetch book details for each waiting list entry
             var bookDetails = new Dictionary<int, Book>(); // Key: BookId, Value: Book
+            var remainingTimes = new Dictionary<int, string>(); // Key: BookId, Value: Formatted Remaining Time
 
             foreach (var entry in waitingListEntries)
             {
@@ -526,15 +606,85 @@ namespace eBook_Library_Service.Controllers
 
                 if (book != null)
                 {
-                    bookDetails[entry.BookId] = book; // Store book details in a dictionary
+                    bookDetails[entry.BookId] = book;
+
+                    // Fetch all borrowed copies of the book
+                    var borrowedCopies = await _context.BorrowHistory
+                        .Where(bh => bh.BookId == entry.BookId && bh.ReturnDate > DateTime.UtcNow)
+                        .OrderBy(bh => bh.ReturnDate)
+                        .ToListAsync();
+
+                    // Fetch all users in the waiting list for the book
+                    var waitingListForBook = await _context.WaitingLists
+                        .Where(wl => wl.BookId == entry.BookId)
+                        .OrderBy(wl => wl.Position)
+                        .ToListAsync();
+
+                    // Calculate the user's effective position
+                    var effectivePosition = entry.Position - borrowedCopies.Count;
+
+                    if (effectivePosition <= 0)
+                    {
+                        // The user will get the next available copy
+                        var returnDate = borrowedCopies[entry.Position - 1].ReturnDate;
+                        var remainingTime = returnDate - DateTime.UtcNow;
+                        remainingTimes[entry.BookId] = FormatRemainingTime(remainingTime);
+                    }
+                    else
+                    {
+                        // The user will have to wait for multiple copies to be returned
+                        var returnDate = borrowedCopies[borrowedCopies.Count - 1].ReturnDate;
+                        var remainingTime = returnDate - DateTime.UtcNow;
+                        remainingTimes[entry.BookId] = $"Waiting for {effectivePosition} copies: {FormatRemainingTime(remainingTime)}";
+                    }
+                }
+                else
+                {
+                    // If the book is not found, mark it as unavailable
+                    remainingTimes[entry.BookId] = "Book not found";
                 }
             }
 
             // Pass the data to the view
             ViewBag.WaitingListEntries = waitingListEntries;
             ViewBag.BookDetails = bookDetails;
+            ViewBag.RemainingTimes = remainingTimes;
 
             return View(); // No model is passed to the view
+        }
+
+        private string FormatRemainingTime(TimeSpan timeSpan)
+        {
+            if (timeSpan <= TimeSpan.Zero)
+            {
+                return "Available Now";
+            }
+
+            var days = timeSpan.Days;
+            var hours = timeSpan.Hours;
+            var minutes = timeSpan.Minutes;
+            var seconds = timeSpan.Seconds;
+
+            var formattedTime = new List<string>();
+
+            if (days > 0)
+            {
+                formattedTime.Add($"{days} day{(days > 1 ? "s" : "")}");
+            }
+            if (hours > 0)
+            {
+                formattedTime.Add($"{hours} hour{(hours > 1 ? "s" : "")}");
+            }
+            if (minutes > 0)
+            {
+                formattedTime.Add($"{minutes} minute{(minutes > 1 ? "s" : "")}");
+            }
+            if (seconds > 0)
+            {
+                formattedTime.Add($"{seconds} second{(seconds > 1 ? "s" : "")}");
+            }
+
+            return string.Join(", ", formattedTime);
         }
         private async Task BorrowBookAsync(string userId, int bookId)
         {

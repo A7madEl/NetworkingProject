@@ -172,6 +172,7 @@ namespace eBook_Library_Service.Controllers
                     Description = book.Description,
                     YearPublished = book.YearPublished,
                     Price = book.BuyPrice,
+                    ImageUrl = book.ImageUrl,
                     PurchaseDate = DateTime.UtcNow
                 };
 
@@ -276,7 +277,42 @@ namespace eBook_Library_Service.Controllers
             return Redirect(payment.GetApprovalUrl());
         }
 
-      
-    
+        [HttpPost]
+        public async Task<IActionResult> DeletePurchase(int purchaseId)
+        {
+            try
+            {
+                // Get the current user's ID
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (userId == null)
+                {
+                    return Unauthorized(); // User is not logged in
+                }
+
+                // Fetch the purchase record
+                var purchase = await _context.PurchaseHistories
+                    .FirstOrDefaultAsync(p => p.Id == purchaseId && p.UserId == userId);
+
+                if (purchase == null)
+                {
+                    TempData["ErrorMessage"] = "Purchase not found or you do not have permission to delete it.";
+                    return RedirectToAction("PurchaseHistory");
+                }
+
+                // Remove the purchase record
+                _context.PurchaseHistories.Remove(purchase);
+                await _context.SaveChangesAsync();
+
+                TempData["Message"] = "Purchase deleted successfully.";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while deleting the purchase.");
+                TempData["ErrorMessage"] = "An error occurred while deleting the purchase. Please try again.";
+            }
+
+            return RedirectToAction("PurchaseHistory");
+        }
+
     }
 }

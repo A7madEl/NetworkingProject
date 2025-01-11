@@ -17,6 +17,7 @@ namespace eBook_Library_Service.Models
         public DateTime BorrowDate { get; set; } // Date the book was borrowed
         public DateTime ReturnDate { get; set; } // Date the book is due to be returned
         public virtual Book Book { get; set; }
+
         public virtual Users User { get; set; }
         // Navigation properties
 

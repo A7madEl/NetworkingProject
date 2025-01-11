@@ -77,5 +77,6 @@ namespace eBook_Library_Service.Models
         public string Formats { get; set; } = "epub,f2b,mobi,PDF";
 
         public virtual ICollection<BookAuthor> BookAuthors { get; set; }
+        public bool IsBuyOnly { get; set; } = false; // Default to false
     }
 }

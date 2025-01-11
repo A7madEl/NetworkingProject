@@ -1,4 +1,5 @@
-﻿@model List<eBook_Library_Service.Models.BorrowHistory>
+﻿﻿
+@model List<eBook_Library_Service.Models.BorrowHistory>
 
 @{
     ViewData["Title"] = "Borrow History";
@@ -7,7 +8,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
-            <h2>Your Borrow History</h2>
+            <h2>My Borrowed Books</h2>
             <hr />
 
             @if (TempData["Message"] != null)
@@ -25,17 +26,22 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            <th>Image</th>
                             <th>Book Title</th>
                             <th>Borrow Date</th>
                             <th>Return Date</th>
                             <th>Status</th>
-                            <th>Download</th> <!-- New column for download links -->
+                            <th>Download</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var borrow in Model)
                         {
                             <tr>
+                                <td>
+                                    <!-- Display the book image -->
+                                    <img src="@Url.Content("~/images/" + borrow.Book.ImageUrl)" alt="@borrow.Book.Title" style="width: 100px; height: auto;" />
+                                </td>
                                 <td>@borrow.Book.Title</td>
                                 <td>@borrow.BorrowDate.ToString("yyyy-MM-dd HH:mm")</td>
                                 <td>@borrow.ReturnDate.ToString("yyyy-MM-dd HH:mm")</td>

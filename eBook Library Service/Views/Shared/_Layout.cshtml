@@ -133,6 +133,7 @@
                 <ul>
                     <li><a href="/Home" class="active">Home</a></li>
                     <li><a href="/Home/Profile">Profile</a></li>
+                    <li><a href="/Book/UserIndex">All Books</a></li>
 
                     <!-- Admin-Specific Links -->
                     @if (User.IsInRole("Admin"))
@@ -144,17 +145,13 @@
                     else
                     {
                         <li class="dropdown">
-                            <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <a href="#"><span>My Library</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="/Book/UserIndex">THE LIBRARY</a></li>
-                                <li class="dropdown">
-                                    <a href="#"><span>MyBooks</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="/Payment/PurchaseHistory">View Purchase History</a></li>
-                                        <li><a asp-controller="Book" asp-action="BorrowHistory">View Borrow History</a></li>
-                                        <li><a asp-controller="Book" asp-action="BorrowedRequests">View Borrowed Requests</a></li>
-                                    </ul>
-                                </li>
+
+                                <li><a href="/Payment/PurchaseHistory"> Purchased Books</a></li>
+                                <li><a asp-controller="Book" asp-action="BorrowHistory">Borrowed Books</a></li>
+                                <li><a asp-controller="Book" asp-action="BorrowedRequests">Borrowed Requests</a></li>
+                               
                             </ul>
                         </li>
 

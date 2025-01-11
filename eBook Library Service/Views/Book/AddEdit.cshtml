@@ -64,7 +64,12 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="form-group mb-3">
+                    <div class="form-check">
+                        <input asp-for="IsBuyOnly" class="form-check-input" />
+                        <label asp-for="IsBuyOnly" class="form-check-label">Buy Only</label>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group mb-3">
@@ -209,4 +214,46 @@
             }
         }
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const discountPriceInput = document.querySelector('input[name="DiscountPrice"]');
+        const discountEndDateInput = document.querySelector('input[name="DiscountEndDate"]');
+        const form = document.querySelector('form');
+
+        // Function to validate the discount end date
+        function validateDiscountEndDate() {
+            if (discountPriceInput.value && discountPriceInput.value > 0) {
+                const discountEndDate = new Date(discountEndDateInput.value);
+                const maxDiscountEndDate = new Date();
+                maxDiscountEndDate.setDate(maxDiscountEndDate.getDate() + 7); // 7 days from now
+
+                if (discountEndDate > maxDiscountEndDate) {
+                    alert("Discount End Date cannot be more than 7 days from today.");
+                    discountEndDateInput.value = ""; // Clear the invalid date
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Add event listener to the form submission
+        form.addEventListener("submit", function (event) {
+            if (!validateDiscountEndDate()) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            }
+        });
+
+        // Add event listener to the discount price input
+        discountPriceInput.addEventListener("input", function () {
+            if (discountPriceInput.value && discountPriceInput.value > 0) {
+                // If a discount is applied, set the default DiscountEndDate to 7 days from now
+                const defaultDiscountEndDate = new Date();
+                defaultDiscountEndDate.setDate(defaultDiscountEndDate.getDate() + 7);
+                discountEndDateInput.value = defaultDiscountEndDate.toISOString().split('T')[0];
+            } else {
+                // If no discount is applied, clear the DiscountEndDate
+                discountEndDateInput.value = "";
+            }
+        });
+    });
 </script>

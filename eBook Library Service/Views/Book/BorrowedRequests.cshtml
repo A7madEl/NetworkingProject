@@ -4,12 +4,13 @@
 
     var waitingListEntries = ViewBag.WaitingListEntries as List<WaitingList>;
     var bookDetails = ViewBag.BookDetails as Dictionary<int, Book>;
+    var remainingTimes = ViewBag.RemainingTimes as Dictionary<int, string>;
 }
 
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
-            <h2>Your Borrowed Requests</h2>
+            <h2>My Borrowed Requests</h2>
             <hr />
 
             @if (TempData["Message"] != null)
@@ -30,16 +31,29 @@
                             <th>Book Title</th>
                             <th>Join Date</th>
                             <th>Position</th>
+                            <th>Remaining Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var entry in waitingListEntries)
                         {
-                            var book = bookDetails[entry.BookId]; // Fetch book details using BookId
+                            var book = bookDetails.ContainsKey(entry.BookId) ? bookDetails[entry.BookId] : null;
+                            var remainingTime = remainingTimes.ContainsKey(entry.BookId) ? remainingTimes[entry.BookId] : "Not available";
+
                             <tr>
-                                <td>@book.Title</td>
+                                <td>@(book?.Title ?? "Book not found")</td>
                                 <td>@entry.JoinDate.ToString("yyyy-MM-dd HH:mm")</td>
                                 <td>@entry.Position</td>
+                                <td>
+                                    @if (remainingTime == "Available Now")
+                                    {
+                                        <span class="text-success">@remainingTime</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@remainingTime</span>
+                                    }
+                                </td>
                             </tr>
                         }
                     </tbody>
