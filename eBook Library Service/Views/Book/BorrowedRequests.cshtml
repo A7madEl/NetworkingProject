@@ -4,7 +4,7 @@
 
     var waitingListEntries = ViewBag.WaitingListEntries as List<WaitingList>;
     var bookDetails = ViewBag.BookDetails as Dictionary<int, Book>;
-    var remainingTimes = ViewBag.RemainingTimes as Dictionary<int, string>;
+    var remainingTimes = ViewBag.RemainingTimes as Dictionary<int, long>;
 }
 
 <div class="container mt-5">
@@ -38,20 +38,24 @@
                         @foreach (var entry in waitingListEntries)
                         {
                             var book = bookDetails.ContainsKey(entry.BookId) ? bookDetails[entry.BookId] : null;
-                            var remainingTime = remainingTimes.ContainsKey(entry.BookId) ? remainingTimes[entry.BookId] : "Not available";
+                            var remainingTime = remainingTimes.ContainsKey(entry.BookId) ? remainingTimes[entry.BookId] : -1;
 
                             <tr>
                                 <td>@(book?.Title ?? "Book not found")</td>
                                 <td>@entry.JoinDate.ToString("yyyy-MM-dd HH:mm")</td>
                                 <td>@entry.Position</td>
                                 <td>
-                                    @if (remainingTime == "Available Now")
+                                    @if (remainingTime == -1)
                                     {
-                                        <span class="text-success">@remainingTime</span>
+                                        <span class="text-danger">Book not found</span>
+                                    }
+                                    else if (remainingTime == 0)
+                                    {
+                                        <span class="text-success">Available Now</span>
                                     }
                                     else
                                     {
-                                        <span>@remainingTime</span>
+                                        <span id="countdown-@entry.BookId" data-seconds="@remainingTime"></span>
                                     }
                                 </td>
                             </tr>
@@ -68,3 +72,34 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function updateCountdowns() {
+            document.querySelectorAll('[id^="countdown-"]').forEach(element => {
+                var seconds = parseInt(element.getAttribute('data-seconds'));
+                if (seconds > 0) {
+                    var days = Math.floor(seconds / (3600 * 24));
+                    var hours = Math.floor((seconds % (3600 * 24)) / 3600);
+                    var minutes = Math.floor((seconds % 3600) / 60);
+                    var secs = seconds % 60;
+
+                    var countdownText = '';
+                    if (days > 0) countdownText += days + ' day' + (days > 1 ? 's ' : ' ');
+                    if (hours > 0) countdownText += hours + ' hour' + (hours > 1 ? 's ' : ' ');
+                    if (minutes > 0) countdownText += minutes + ' minute' + (minutes > 1 ? 's ' : ' ');
+                    if (secs > 0) countdownText += secs + ' second' + (secs > 1 ? 's ' : ' ');
+
+                    element.textContent = countdownText.trim();
+                    element.setAttribute('data-seconds', seconds - 1);
+                } else {
+                    element.textContent = 'Available Now';
+                    element.classList.add('text-success');
+                }
+            });
+        }
+
+        setInterval(updateCountdowns, 1000);
+        updateCountdowns(); // Initial call to set the countdowns immediately
+    </script>
+}

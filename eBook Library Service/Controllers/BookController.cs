@@ -597,7 +597,7 @@ namespace eBook_Library_Service.Controllers
 
             // Fetch book details for each waiting list entry
             var bookDetails = new Dictionary<int, Book>(); // Key: BookId, Value: Book
-            var remainingTimes = new Dictionary<int, string>(); // Key: BookId, Value: Formatted Remaining Time
+            var remainingTimes = new Dictionary<int, long>(); // Key: BookId, Value: Remaining Time in Seconds
 
             foreach (var entry in waitingListEntries)
             {
@@ -628,20 +628,20 @@ namespace eBook_Library_Service.Controllers
                         // The user will get the next available copy
                         var returnDate = borrowedCopies[entry.Position - 1].ReturnDate;
                         var remainingTime = returnDate - DateTime.UtcNow;
-                        remainingTimes[entry.BookId] = FormatRemainingTime(remainingTime);
+                        remainingTimes[entry.BookId] = (long)remainingTime.TotalSeconds;
                     }
                     else
                     {
                         // The user will have to wait for multiple copies to be returned
                         var returnDate = borrowedCopies[borrowedCopies.Count - 1].ReturnDate;
                         var remainingTime = returnDate - DateTime.UtcNow;
-                        remainingTimes[entry.BookId] = $"Waiting for {effectivePosition} copies: {FormatRemainingTime(remainingTime)}";
+                        remainingTimes[entry.BookId] = (long)remainingTime.TotalSeconds;
                     }
                 }
                 else
                 {
                     // If the book is not found, mark it as unavailable
-                    remainingTimes[entry.BookId] = "Book not found";
+                    remainingTimes[entry.BookId] = -1;
                 }
             }
 

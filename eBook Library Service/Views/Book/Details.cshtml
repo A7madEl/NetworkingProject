@@ -256,13 +256,15 @@
                         </button>
                     </form>
 
-                    <!-- Borrow -->
-                    <form asp-controller="Book" asp-action="BorrowBook" method="post" onsubmit="return checkStockBeforeBorrow(event, @Model.BookId, @Model.Stock);">
-                        <input type="hidden" name="bookId" value="@Model.BookId" />
-                        <button type="submit" class="btn btn-borrow">
-                            <i class="fas fa-book"></i> Borrow
-                        </button>
-                    </form>
+                    @if (!Model.IsBuyOnly)
+                    {
+                        <form asp-controller="Book" asp-action="BorrowBook" method="post" onsubmit="return checkStockBeforeBorrow(event, @Model.BookId, @Model.Stock);">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <button type="submit" class="btn btn-borrow">
+                                <i class="fas fa-book"></i> Borrow
+                            </button>
+                        </form>
+                    }
 
                     <!-- Add to Cart -->
                     <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">

@@ -19,7 +19,7 @@ namespace eBook_Library_Service.Models
         public virtual Book Book { get; set; }
 
         public virtual Users User { get; set; }
-        // Navigation properties
+        
 
     }
 }
