@@ -390,7 +390,7 @@
                     </form>
                     @if (!book.IsBuyOnly)
                     {
-                        <form asp-controller="Book" asp-action="ChoosePaymentMethod" method="get" onsubmit="return checkStockBeforeBorrow(event, @book.BookId, @book.Stock);">
+                        <form asp-controller="Book" asp-action="ChoosePaymentMethod" method="post" onsubmit="return checkStockBeforeBorrow(event, @book.BookId, @book.Stock);">
                             <input type="hidden" name="bookId" value="@book.BookId" />
                             <button type="submit" class="btn btn-borrow">
                                 <i class="fas fa-book"></i> Borrow

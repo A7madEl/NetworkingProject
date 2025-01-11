@@ -45,7 +45,9 @@
                 <ul>
                     <li><a href="/Home" class="active">Home</a></li>
                     <li><a href="/Home/Profile">Profile</a></li>
+                    <li><a href="/Book/UserIndex">All Books</a></li>
 
+                    <!-- Admin-Specific Links -->
                     @if (User.IsInRole("Admin"))
                     {
                         <li><a href="/Book/Index">Manage Books</a></li>
@@ -54,24 +56,19 @@
                     }
                     else
                     {
-                        <li class="dropdown">
-                            <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="/Book/UserIndex">THE LIBRARY</a></li>
+                        if (User.IsInRole("User"))
+                        {
+                            <li class="dropdown">
+                                <a href="#"><span>My Library</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
 
+                                    <li><a href="/Payment/PurchaseHistory"> Purchased Books</a></li>
+                                    <li><a asp-controller="Book" asp-action="BorrowHistory">Borrowed Books</a></li>
+                                    <li><a asp-controller="Book" asp-action="BorrowedRequests">Borrowed Requests</a></li>
 
-
-                                <li class="dropdown">
-                                    <a href="#"><span>MyBooks</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="/Payment/PurchaseHistory">View Purchase History</a></li>
-                                        <li><a asp-controller="Book" asp-action="BorrowHistory">View Borrow History</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                            </ul>
-                        </li>
-
+                                </ul>
+                            </li>
+                        }
                         <li><a href="/Home/About">About</a></li>
                         <li><a href="/Home/Contact">Contact</a></li>
                         <li>
@@ -80,14 +77,10 @@
                                 <span class="cart-count">0</span> <!-- Optional: Display the number of items in the cart -->
                             </a>
                         </li>
-
-
                     }
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
             </nav>
-
         </div>
         <div class="auth-buttons">
             <partial name="_LoginPartial" />

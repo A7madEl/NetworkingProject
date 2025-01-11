@@ -29,7 +29,7 @@
 </head>
 
 <body class="index-page">
-    <!-- Modal Dialog for Error Messages -->
+
     <div id="errorModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -40,51 +40,51 @@
     <style>
         /* Modal styles */
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
         }
 
         .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 8px;
-            text-align: center;
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 8px;
+        text-align: center;
         }
 
         .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
         }
 
-            .close:hover {
-                color: #000;
-            }
+        .close:hover {
+        color: #000;
+        }
     </style>
 
     <script>
         // Function to show the modal with an error message
         function showErrorModal(message) {
-            document.getElementById('errorMessage').textContent = message;
-            document.getElementById('errorModal').style.display = 'block';
+        document.getElementById('errorMessage').textContent = message;
+        document.getElementById('errorModal').style.display = 'block';
         }
 
         // Function to close the modal
         function closeErrorModal() {
-            document.getElementById('errorModal').style.display = 'none';
+        document.getElementById('errorModal').style.display = 'none';
         }
 
         // Close the modal when the user clicks on the close button
@@ -92,9 +92,9 @@
 
         // Close the modal when the user clicks outside of it
         window.onclick = function (event) {
-            if (event.target === document.getElementById('errorModal')) {
-                closeErrorModal();
-            }
+        if (event.target === document.getElementById('errorModal')) {
+        closeErrorModal();
+        }
         };
 
         // Check for TempData error messages and display them in the modal
@@ -102,27 +102,54 @@
         @if (TempData["ErrorMessage"] != null)
         {
             <text>
-                    showErrorModal('@TempData["ErrorMessage"]');
+                showErrorModal('@TempData["ErrorMessage"]');
             </text>
         }
         });
 
-        // Handle waiting list popup from TempData
+        // Function to handle the waiting list popup
+        function handleWaitingListPopup(bookId, bookTitle) {
+        const userResponse = confirm(`"${bookTitle}" is not available for borrowing at the moment. Do you want to enter the waiting list?`);
+        if (userResponse) {
+        // User clicked "OK", submit a POST request to join the waiting list
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/Book/JoinWaitingList';
+
+        // Add anti-forgery token
+        const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+        const tokenInput = document.createElement('input');
+        tokenInput.type = 'hidden';
+        tokenInput.name = '__RequestVerificationToken';
+        tokenInput.value = token;
+        form.appendChild(tokenInput);
+
+        // Add bookId as a hidden input
+        const bookIdInput = document.createElement('input');
+        bookIdInput.type = 'hidden';
+        bookIdInput.name = 'bookId';
+        bookIdInput.value = bookId;
+        form.appendChild(bookIdInput);
+
+        // Submit the form
+        document.body.appendChild(form);
+        form.submit();
+        } else {
+        // User clicked "Cancel", redirect back to book list
+        window.location.href = "/Book/UserIndex";
+        }
+        }
+
+        // Check for TempData and handle waiting list popup
+        document.addEventListener('DOMContentLoaded', function () {
         @if (TempData["ShowWaitingListPopup"] != null && (bool)TempData["ShowWaitingListPopup"])
         {
             <text>
-                    const userResponse = confirm("This book is not available for borrowing at the moment. Do you want to enter the waiting list?");
-                    if (userResponse) {
-                        // User clicked "OK", redirect to join the waiting list
-                        window.location.href = `/Book/JoinWaitingList?bookId=@TempData["BookId"]`;
-                    } else {
-                        // User clicked "Cancel", redirect back to book list
-                        window.location.href = "/Book/UserIndex";
-                    }
+                handleWaitingListPopup(@TempData["BookId"], '@TempData["BookTitle"]');
             </text>
         }
+        });
     </script>
-
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="/Home" class="logo d-flex align-items-center me-auto">
@@ -144,17 +171,19 @@
                     }
                     else
                     {
-                        <li class="dropdown">
-                            <a href="#"><span>My Library</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
+                        if (User.IsInRole("User"))
+                        {
+                            <li class="dropdown">
+                                <a href="#"><span>My Library</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
 
-                                <li><a href="/Payment/PurchaseHistory"> Purchased Books</a></li>
-                                <li><a asp-controller="Book" asp-action="BorrowHistory">Borrowed Books</a></li>
-                                <li><a asp-controller="Book" asp-action="BorrowedRequests">Borrowed Requests</a></li>
-                               
-                            </ul>
-                        </li>
+                                    <li><a href="/Payment/PurchaseHistory"> Purchased Books</a></li>
+                                    <li><a asp-controller="Book" asp-action="BorrowHistory">Borrowed Books</a></li>
+                                    <li><a asp-controller="Book" asp-action="BorrowedRequests">Borrowed Requests</a></li>
 
+                                </ul>
+                            </li>
+                        }
                         <li><a href="/Home/About">About</a></li>
                         <li><a href="/Home/Contact">Contact</a></li>
                         <li>

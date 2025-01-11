@@ -20,7 +20,7 @@ namespace eBook_Library_Service.Controllers
         private readonly EmailService _emailService;
 
 
-        public BookController(AppDbContext context, IWebHostEnvironment webHostingEnvironment, ILogger<BookController> logger,EmailService emailService)
+        public BookController(AppDbContext context, IWebHostEnvironment webHostingEnvironment, ILogger<BookController> logger, EmailService emailService)
         {
             _books = new Repository<Book>(context);
             _authors = new Repository<Author>(context);
@@ -484,7 +484,7 @@ namespace eBook_Library_Service.Controllers
 
             return position; // Return the user's position in the waiting list
         }
-        [HttpGet]
+        [HttpPost]
         [Authorize]
         public async Task<IActionResult> ChoosePaymentMethod(int bookId)
         {
@@ -533,167 +533,30 @@ namespace eBook_Library_Service.Controllers
             }
 
 
-           
-           
+            if (book.Stock > 0)
+            {
+
                 ViewBag.BookId = bookId;
                 ViewBag.BookTitle = book.Title;
                 return View("ChoosePaymentMethod"); // Redirect to the payment method selection view
-            
-           
-        }
-
-
-
-
-        //public async Task<IActionResult> BorrowBook(int bookId)
-        //{
-        //    // Get the current user's ID
-        //    var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        //    if (userId == null)
-        //    {
-        //        return Unauthorized(); 
-        //    }
-
-
-        //    var book = await _context.Books.FindAsync(bookId);
-        //    if (book == null)
-        //    {
-        //        TempData["ErrorMessage"] = "Book not found.";
-        //        return RedirectToAction("UserIndex", "Book");
-        //    }
-
-
-        //    var isAlreadyBorrowed = await _context.BorrowHistory
-        //        .AnyAsync(bh => bh.UserId == userId && bh.BookId == bookId);
-
-        //    if (isAlreadyBorrowed)
-        //    {
-        //        TempData["ErrorMessage"] = "You have already borrowed this book.";
-        //        return RedirectToAction("UserIndex", "Book");
-        //    }
-
-        //    // Check if the user has already borrowed 3 books
-        //    var borrowedBooksCount = await _context.BorrowHistory
-        //        .CountAsync(bh => bh.UserId == userId && bh.ReturnDate > DateTime.UtcNow);
-
-        //    // Check if the user is on the waiting list for any books
-        //    var waitingListCount = await _context.WaitingLists
-        //        .CountAsync(wl => wl.UserId == userId);
-
-        //    if (borrowedBooksCount >= 3)
-        //    {
-        //        TempData["ErrorMessage"] = "You have reached the maximum borrowing limit of 3 books.";
-        //        return RedirectToAction("UserIndex", "Book");
-        //    }
-
-        //    if (borrowedBooksCount + waitingListCount >= 3)
-        //    {
-        //        TempData["ErrorMessage"] = "You have reached the maximum borrowing and waiting limit of 3 books.";
-        //        return RedirectToAction("UserIndex", "Book");
-        //    }
-
-        //    // If the book is available, borrow it
-        //    if (book.Stock > 0)
-        //    {
-        //        book.Stock -= 1; // Reduce the book's stock
-        //        var borrowHistory = new BorrowHistory
-        //        {
-        //            UserId = userId,
-        //            BookId = bookId,
-        //            BorrowDate = DateTime.UtcNow,
-        //            ReturnDate = DateTime.UtcNow.AddMinutes(5) // 30-day borrowing period
-        //        };
-        //        _context.BorrowHistory.Add(borrowHistory);
-        //        await _context.SaveChangesAsync();
-
-        //        TempData["Message"] = $"You have successfully borrowed {book.Title}.";
-        //        return RedirectToAction("BorrowHistory", "Book");
-        //    }
-        //    else
-        //    {
-
-        //        TempData["ShowWaitingListPopup"] = true;
-        //        TempData["BookId"] = bookId;
-        //        TempData["BookTitle"] = book.Title;
-        //        return RedirectToAction("UserIndex", "Book");
-        //    }
-        //}
-
-        [HttpPost]
-        [Authorize]
-        public async Task<IActionResult> JoinWaitingList(int bookId)
-        {
-            try
-            {
-                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-                if (userId == null)
-                {
-                    return Unauthorized();
-                }
-
-                var book = await _context.Books.FindAsync(bookId);
-                if (book == null)
-                {
-                    TempData["ErrorMessage"] = "Book not found.";
-                    return RedirectToAction("UserIndex", "Book");
-                }
-
-                // Check if the user is already in the waiting list for this book
-                var isAlreadyInWaitingList = await _context.WaitingLists
-                    .AnyAsync(wl => wl.UserId == userId && wl.BookId == bookId);
-
-                if (isAlreadyInWaitingList)
-                {
-                    TempData["ErrorMessage"] = "You are already in the waiting list for this book.";
-                    return RedirectToAction("UserIndex", "Book");
-                }
-
-                // Calculate the user's position in the waiting list
-                var position = await _context.WaitingLists
-                    .CountAsync(wl => wl.BookId == bookId) + 1;
-
-                // Add the user to the waiting list
-                var waitingListEntry = new WaitingList
-                {
-                    UserId = userId,
-                    BookId = bookId,
-                    JoinDate = DateTime.UtcNow,
-                    Position = position
-                };
-
-                _context.WaitingLists.Add(waitingListEntry);
-                await _context.SaveChangesAsync();
-
-                // Send a confirmation email
-                var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
-                if (!string.IsNullOrEmpty(userEmail))
-                {
-                    var emailSubject = "Added to Waiting List";
-                    var emailMessage = $"Dear {User.Identity.Name},<br/><br/>" +
-                                       $"You have been added to the waiting list for the book <strong>{book.Title}</strong>.<br/>" +
-                                       $"Your current position in the waiting list is <strong>{position}</strong>.<br/><br/>" +
-                                       $"We will notify you as soon as the book becomes available.<br/><br/>" +
-                                       $"Thank you for using our service!<br/><br/>" +
-                                       $"Best regards,<br/>" +
-                                       $"The Library Team";
-
-                    await _emailService.SendEmailAsync(userEmail, emailSubject, emailMessage);
-                    _logger.LogInformation($"Waiting list confirmation email sent to {userEmail}.");
-                }
-
-                // Set success message
-                TempData["Message"] = $"You have been added to the waiting list for {book.Title}. Your position is {position}.";
-
-                // Redirect to the BorrowedRequests page
-                return RedirectToAction("BorrowedRequests", "Book");
             }
-            catch (Exception ex)
+
+            else
             {
-                _logger.LogError(ex, "An error occurred while joining the waiting list.");
-                TempData["ErrorMessage"] = "An error occurred while joining the waiting list. Please contact support.";
+
+                TempData["ShowWaitingListPopup"] = true;
+                TempData["BookId"] = bookId;
+                TempData["BookTitle"] = book.Title;
                 return RedirectToAction("UserIndex", "Book");
             }
         }
+
+
+
+
+      
+
+
         public async Task<IActionResult> BorrowedRequests()
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -916,7 +779,7 @@ namespace eBook_Library_Service.Controllers
             TempData["Message"] = $"You have successfully returned {borrowRecord.Book.Title}.";
             return RedirectToAction("BorrowHistory", "Book");
         }
-    
+
         [Authorize]
         public async Task<IActionResult> DownloadFile(int bookId, string fileType)
         {
@@ -1018,5 +881,64 @@ namespace eBook_Library_Service.Controllers
 
             return RedirectToAction("Details", new { id = bookId });
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> JoinWaitingList(int bookId)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var book = await _context.Books.FindAsync(bookId);
+            if (book == null)
+            {
+                TempData["ErrorMessage"] = "Book not found.";
+                return RedirectToAction("UserIndex", "Book");
+            }
+
+            var isAlreadyInWaitingList = await _context.WaitingLists
+                .AnyAsync(wl => wl.UserId == userId && wl.BookId == bookId);
+
+            if (isAlreadyInWaitingList)
+            {
+                TempData["ErrorMessage"] = "You are already in the waiting list for this book.";
+                return RedirectToAction("UserIndex", "Book");
+            }
+
+            var position = await _context.WaitingLists
+                .CountAsync(wl => wl.BookId == bookId) + 1;
+
+            var waitingListEntry = new WaitingList
+            {
+                UserId = userId,
+                BookId = bookId,
+                JoinDate = DateTime.UtcNow,
+                Position = position
+            };
+            _context.WaitingLists.Add(waitingListEntry);
+            await _context.SaveChangesAsync();
+
+            // Send an email to the user about joining the waiting list
+            var emailSubject = "Waiting List Confirmation";
+            var emailMessage = $"Dear {User.Identity.Name},<br/><br/>" +
+                               $"You have been added to the waiting list for the book <strong>{book.Title}</strong>.<br/>" +
+                               $"Your current position in the waiting list is <strong>{position}</strong>.<br/><br/>" +
+                               $"We will notify you once the book becomes available.<br/><br/>" +
+                               $"Thank you for using eBook Library Service!<br/><br/>" +
+                               $"Best regards,<br/>" +
+                               $"eBook Library Service Team";
+
+            await _emailService.SendEmailAsync(userEmail, emailSubject, emailMessage);
+            _logger.LogInformation($"Waiting list confirmation email sent to {userEmail}.");
+
+            TempData["Message"] = $"You have been added to the waiting list for {book.Title}. Your position is {position}.";
+            return RedirectToAction("BorrowedRequests", "Book");
+        }
     }
 }
+    

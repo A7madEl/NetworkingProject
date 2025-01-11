@@ -1420,13 +1420,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\eBook Library Service.bnfashdtas.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bnfashdtas"},{"Name":"integrity","Value":"sha256-SQJLmk3kIT\u002BP78jok3jHFoU2zuW9Z0gGydk6VqfT5C0="},{"Name":"label","Value":"_content/eBook Library Service/eBook Library Service.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1139"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022SQJLmk3kIT\u002BP78jok3jHFoU2zuW9Z0gGydk6VqfT5C0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 11 Jan 2025 18:52:38 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1139"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022SQJLmk3kIT\u002BP78jok3jHFoU2zuW9Z0gGydk6VqfT5C0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 11 Jan 2025 22:53:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/eBook Library Service/eBook Library Service.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\eBook Library Service.bnfashdtas.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SQJLmk3kIT\u002BP78jok3jHFoU2zuW9Z0gGydk6VqfT5C0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1139"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022SQJLmk3kIT\u002BP78jok3jHFoU2zuW9Z0gGydk6VqfT5C0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 11 Jan 2025 18:52:38 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1139"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022SQJLmk3kIT\u002BP78jok3jHFoU2zuW9Z0gGydk6VqfT5C0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 11 Jan 2025 22:53:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/eBook Library Service/forms/contact.2y9qx17zbs.php">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\forms\contact.php'))</AssetFile>

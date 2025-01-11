@@ -422,7 +422,7 @@ namespace eBook_Library_Service.Controllers
                         UserId = userId,
                         BookId = bookId,
                         BorrowDate = DateTime.Now,
-                        ReturnDate = DateTime.Now.AddMinutes(10) // 30-day borrowing period
+                        ReturnDate = DateTime.Now.AddDays(30) // 30-day borrowing period
                     };
 
                     _context.BorrowHistory.Add(borrowHistory);
