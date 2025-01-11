@@ -77,8 +77,15 @@
                 // Re-enable the submit button
                 document.getElementById('submit-button').disabled = false;
             } else {
-                // Payment succeeded, redirect to the success page
-                window.location.href = '@Url.Action("PaymentSuccess", "Payment", new { bookId = ViewBag.BookId })';
+                // Payment succeeded, redirect to the appropriate success page
+                var isBorrow = @Json.Serialize(ViewBag.IsBorrow); // Check if this is a borrow payment
+                if (isBorrow) {
+                    // Redirect to BorrowSuccess for borrow payments
+                    window.location.href = '@Url.Action("BorrowSuccess", "Payment", new { bookId = ViewBag.BookId })';
+                } else {
+                    // Redirect to PaymentSuccess for Buy Now payments
+                    window.location.href = '@Url.Action("PaymentSuccess", "Payment", new { bookId = ViewBag.BookId })';
+                }
             }
         });
     });

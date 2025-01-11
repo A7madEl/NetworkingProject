@@ -1011,3 +1011,5 @@ C:\Users\eldad\Source\Repos\ibrahim\eBook Library Service\obj\Debug\net8.0\refin
 C:\Users\eldad\Source\Repos\ibrahim\eBook Library Service\obj\Debug\net8.0\eBook Library Service.pdb
 C:\Users\eldad\Source\Repos\ibrahim\eBook Library Service\obj\Debug\net8.0\eBook Library Service.genruntimeconfig.cache
 C:\Users\eldad\Source\Repos\ibrahim\eBook Library Service\obj\Debug\net8.0\ref\eBook Library Service.dll
+C:\Users\eldad\Source\Repos\ibrahim\eBook Library Service\bin\Debug\net8.0\SendGrid.dll
+C:\Users\eldad\Source\Repos\ibrahim\eBook Library Service\bin\Debug\net8.0\StarkbankEcdsa.dll

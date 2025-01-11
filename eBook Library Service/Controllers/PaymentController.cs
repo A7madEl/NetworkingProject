@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using eBook_Library_Service.Data;
 using PayPal.Api;
+using eBook_Library_Service.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace eBook_Library_Service.Controllers
 {
@@ -19,13 +22,14 @@ namespace eBook_Library_Service.Controllers
         private readonly ILogger<PaymentController> _logger;
         private readonly IConfiguration _configuration;
         private readonly AppDbContext _context;
+        private readonly EmailService _emailService;
 
         public PaymentController(
             PayPalService payPalService,
             StripeService stripeService,
             ShoppingCartService shoppingCartService,
             ILogger<PaymentController> logger,
-            IConfiguration configuration, AppDbContext context)
+            IConfiguration configuration, AppDbContext context,EmailService emailService)
         {
             _payPalService = payPalService;
             _stripeService = stripeService;
@@ -33,6 +37,7 @@ namespace eBook_Library_Service.Controllers
             _logger = logger;
             _configuration = configuration;
             _context = context;
+            _emailService = emailService;   
         }
 
         // PayPal Checkout for Purchases
@@ -121,6 +126,7 @@ namespace eBook_Library_Service.Controllers
 
             return RedirectToAction("UserIndex", "Book");
         }
+        [Authorize]
         public async Task<IActionResult> PurchaseHistory()
         {
             try
@@ -146,38 +152,108 @@ namespace eBook_Library_Service.Controllers
             }
         }
 
-        // Payment Success for Purchases
-        public async Task<IActionResult> PaymentSuccess(string paymentId, string token, string payerId, int bookId)
+        [Authorize]
+        public async Task<IActionResult> PaymentSuccess(string paymentId, string token, string payerId, int? bookId)
         {
             try
             {
-                // Fetch the book details
-                var book = await _context.Books.FindAsync(bookId);
-                if (book == null)
-                {
-                    TempData["ErrorMessage"] = "Book not found.";
-                    return RedirectToAction("Index", "Home");
-                }
-
-                // Get the current user's ID
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
 
-                // Save the purchase to the PurchaseHistory table
-                var purchase = new PurchaseHistory
+                if (bookId.HasValue)
                 {
-                    UserId = userId,
-                    BookId = book.BookId,
-                    BookTitle = book.Title,
-                    Publisher = book.Publisher,
-                    Description = book.Description,
-                    YearPublished = book.YearPublished,
-                    Price = book.BuyPrice,
-                    ImageUrl = book.ImageUrl,
-                    PurchaseDate = DateTime.UtcNow
-                };
+                    // Handle Buy Now scenario (single book purchase)
+                    var book = await _context.Books.FindAsync(bookId.Value);
+                    if (book == null)
+                    {
+                        TempData["ErrorMessage"] = "Book not found.";
+                        return RedirectToAction("Index", "Home");
+                    }
 
-                _context.PurchaseHistories.Add(purchase);
-                await _context.SaveChangesAsync();
+                    // Save the purchase to the PurchaseHistory table
+                    var purchase = new PurchaseHistory
+                    {
+                        UserId = userId,
+                        BookId = book.BookId,
+                        BookTitle = book.Title,
+                        Publisher = book.Publisher,
+                        Description = book.Description,
+                        YearPublished = book.YearPublished,
+                        Price = book.BuyPrice,
+                        PurchaseDate = DateTime.UtcNow,
+                         ImageUrl = book.ImageUrl
+                    };
+
+                    _context.PurchaseHistories.Add(purchase);
+                    await _context.SaveChangesAsync();
+
+                    // Send email notification for the single book
+                    var emailSubject = "Payment Successful";
+                    var emailMessage = $"Dear {User.Identity.Name},<br/><br/>" +
+                                       $"Your payment for the book <strong>{book.Title}</strong> has been processed successfully.<br/>" +
+                                       $"You can now access the book in your library.<br/><br/>" +
+                                       $"Thank you for using eBook Library Service!<br/><br/>" +
+                                       $"Best regards,<br/>" +
+                                       $"eBook Library Service Team";
+
+                    await _emailService.SendEmailAsync(userEmail, emailSubject, emailMessage);
+                    _logger.LogInformation($"Payment confirmation email sent to {userEmail}.");
+                }
+                else
+                {
+                    // Handle Shopping Cart scenario (multiple books purchase)
+                    var cart = await _shoppingCartService.GetCartAsync();
+                    if (cart == null || !cart.Items.Any())
+                    {
+                        TempData["ErrorMessage"] = "Your cart is empty.";
+                        return RedirectToAction("Index", "ShoppingCart");
+                    }
+
+                    // Process each item in the cart
+                    foreach (var item in cart.Items)
+                    {
+                        var book = await _context.Books.FindAsync(item.BookId);
+                        if (book == null)
+                        {
+                            _logger.LogWarning($"Book with ID {item.BookId} not found in the database.");
+                            continue; // Skip this item and proceed with the next one
+                        }
+
+                        // Save the purchase to the PurchaseHistory table
+                        var purchase = new PurchaseHistory
+                        {
+                            UserId = userId,
+                            BookId = book.BookId,
+                            BookTitle = book.Title,
+                            Publisher = book.Publisher,
+                            Description = book.Description,
+                            YearPublished = book.YearPublished,
+                            Price = book.BuyPrice,
+                            PurchaseDate = DateTime.UtcNow,
+                            ImageUrl = book.ImageUrl
+                        };
+
+                        _context.PurchaseHistories.Add(purchase);
+                    }
+
+                    await _context.SaveChangesAsync();
+
+                    // Send email notification for the entire cart
+                    var emailSubject = "Payment Successful";
+                    var emailMessage = $"Dear {User.Identity.Name},<br/><br/>" +
+                                       $"Your payment for the following books has been processed successfully:<br/><br/>" +
+                                       $"<ul>{string.Join("", cart.Items.Select(item => $"<li>{item.Book.Title}</li>"))}</ul>" +
+                                       $"You can now access the books in your library.<br/><br/>" +
+                                       $"Thank you for using eBook Library Service!<br/><br/>" +
+                                       $"Best regards,<br/>" +
+                                       $"eBook Library Service Team";
+
+                    await _emailService.SendEmailAsync(userEmail, emailSubject, emailMessage);
+                    _logger.LogInformation($"Payment confirmation email sent to {userEmail}.");
+
+                    // Clear the cart after successful payment
+                    await _shoppingCartService.ClearCartAsync();
+                }
 
                 // Set success message
                 TempData["SuccessMessage"] = "Payment successful! Your purchase history has been updated.";
@@ -195,14 +271,14 @@ namespace eBook_Library_Service.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-
         // Payment Cancel for Purchases
         public IActionResult PaymentCancel()
         {
             TempData["Message"] = "Payment was canceled.";
             return RedirectToAction("Index", "Home");
         }
-
+        [HttpGet]
+        [Authorize]
         public async Task<IActionResult> BuyNow(int bookId)
         {
             // Fetch the book details
@@ -232,6 +308,7 @@ namespace eBook_Library_Service.Controllers
             return View("~/Views/ShoppingCart/BuyNow.cshtml", book);
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> ProcessCreditCardPayment(int bookId)
         {
             // Fetch the book details
@@ -312,6 +389,165 @@ namespace eBook_Library_Service.Controllers
             }
 
             return RedirectToAction("PurchaseHistory");
+        }
+        [Authorize]
+        public async Task<IActionResult> BorrowSuccess(int bookId)
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+
+                if (userId == null)
+                {
+                    return Unauthorized(); // User is not logged in
+                }
+
+                // Fetch the book details
+                var book = await _context.Books.FindAsync(bookId);
+                if (book == null)
+                {
+                    TempData["ErrorMessage"] = "Book not found.";
+                    return RedirectToAction("UserIndex", "Book");
+                }
+
+                if (book.Stock > 0)
+                {
+                    // Reduce the book's stock
+                    book.Stock -= 1;
+
+                    // Add the borrow record to the BorrowHistory table
+                    var borrowHistory = new BorrowHistory
+                    {
+                        UserId = userId,
+                        BookId = bookId,
+                        BorrowDate = DateTime.Now,
+                        ReturnDate = DateTime.Now.AddMinutes(10) // 30-day borrowing period
+                    };
+
+                    _context.BorrowHistory.Add(borrowHistory);
+                    await _context.SaveChangesAsync();
+
+                    // Send a success email
+                    var emailSubject = "Borrow Successful";
+                    var emailMessage = $"Dear {User.Identity.Name},<br/><br/>" +
+                                       $"You have successfully borrowed the book <strong>{book.Title}</strong>.<br/>" +
+                                       $"You can now access the book in your library.<br/><br/>" +
+                                       $"Thank you for using eBook Library Service!<br/><br/>" +
+                                       $"Best regards,<br/>" +
+                                       $"eBook Library Service Team";
+
+                    await _emailService.SendEmailAsync(userEmail, emailSubject, emailMessage);
+                    _logger.LogInformation($"Borrow confirmation email sent to {userEmail}.");
+
+                    // Set success message
+                    TempData["Message"] = $"You have successfully borrowed {book.Title}.";
+
+                    // Redirect to the BorrowHistory page
+                    return RedirectToAction("BorrowHistory", "Book");
+                }
+                else
+                {
+                    // Redirect to the JoinWaitingList action in the BookController
+                    return RedirectToAction("JoinWaitingList", "Book", new { bookId = bookId });
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred during the borrow success process.");
+                TempData["ErrorMessage"] = "An error occurred during the borrow success process. Please contact support.";
+                return RedirectToAction("UserIndex", "Book");
+            }
+        }
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> ProcessBorrowPayment(int bookId, string paymentMethod)
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+
+                if (userId == null)
+                {
+                    return Unauthorized(); // User is not logged in
+                }
+
+                // Fetch the book details
+                var book = await _context.Books.FindAsync(bookId);
+                if (book == null)
+                {
+                    TempData["ErrorMessage"] = "Book not found.";
+                    return RedirectToAction("UserIndex", "Book");
+                }
+
+                // Check if the user has already borrowed this book
+                var isAlreadyBorrowed = await _context.BorrowHistory
+                    .AnyAsync(bh => bh.UserId == userId && bh.BookId == bookId);
+
+                if (isAlreadyBorrowed)
+                {
+                    TempData["ErrorMessage"] = "You have already borrowed this book.";
+                    return RedirectToAction("UserIndex", "Book");
+                }
+
+                // Check if the user has already borrowed 3 books
+                var borrowedBooksCount = await _context.BorrowHistory
+                    .CountAsync(bh => bh.UserId == userId && bh.ReturnDate > DateTime.UtcNow);
+
+                if (borrowedBooksCount >= 3)
+                {
+                    TempData["ErrorMessage"] = "You have reached the maximum borrowing limit of 3 books.";
+                    return RedirectToAction("UserIndex", "Book");
+                }
+
+                // If the book is available, proceed with the payment
+                if (book.Stock > 0)
+                {
+                    if (paymentMethod == "paypal")
+                    {
+                        // Handle PayPal payment
+                        var returnUrl = Url.Action("BorrowSuccess", "Payment", new { bookId = bookId }, Request.Scheme);
+                        var cancelUrl = Url.Action("PaymentCancel", "Payment", null, Request.Scheme);
+
+                        var payment = _payPalService.CreatePayment(book.BorrowPrice, returnUrl, cancelUrl, "sale");
+                        return Redirect(payment.GetApprovalUrl());
+                    }
+                    else if (paymentMethod == "stripe")
+                    {
+                        // Handle Stripe payment
+                        var clientSecret = _stripeService.CreatePaymentIntent(book.BorrowPrice);
+
+                        ViewBag.StripeClientSecret = clientSecret;
+                        ViewBag.StripePublishableKey = _configuration["Stripe:PublishableKey"];
+                        ViewBag.BookId = bookId;
+                        ViewBag.IsBorrow = true; // Set this flag to indicate a borrow payment
+
+                        return View("~/Views/ShoppingCart/StripeCheckout.cshtml");
+                    }
+                    else
+                    {
+                        TempData["ErrorMessage"] = "Invalid payment method selected.";
+                        return RedirectToAction("UserIndex", "Book");
+                    }
+                }
+                else
+                {
+
+
+                    TempData["ShowWaitingListPopup"] = true;
+                    TempData["BookId"] = bookId;
+                    TempData["BookTitle"] = book.Title;
+                    return RedirectToAction("UserIndex", "Book");
+                }
+            }
+            
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred during the borrow payment process.");
+                TempData["ErrorMessage"] = "An error occurred during the borrow payment process. Please try again.";
+                return RedirectToAction("UserIndex", "Book");
+            }
         }
 
     }

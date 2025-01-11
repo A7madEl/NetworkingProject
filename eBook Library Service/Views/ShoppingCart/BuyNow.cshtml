@@ -31,12 +31,10 @@
                         <h6>Pay with Credit Card</h6>
                         <form asp-controller="Payment" asp-action="ProcessCreditCardPayment" method="post">
                             <input type="hidden" name="bookId" value="@Model.BookId" />
-                            <input type="hidden" name="isBorrow" value="@ViewBag.IsBorrow" />
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-credit-card"></i> Pay with Credit Card
                             </button>
                         </form>
-
                     </div>
 
                     <!-- PayPal Payment -->

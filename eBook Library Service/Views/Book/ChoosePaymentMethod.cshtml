@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Choose Payment Method";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Choose Payment Method</h2>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Borrow: @ViewBag.BookTitle</h5>
+                    <p class="card-text">Please choose your preferred payment method to borrow this book.</p>
+
+                    <!-- PayPal Option -->
+                    <form asp-controller="Payment" asp-action="ProcessBorrowPayment" method="post">
+                        <input type="hidden" name="bookId" value="@ViewBag.BookId" />
+                        <input type="hidden" name="paymentMethod" value="paypal" />
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                            <i class="fab fa-paypal"></i> Pay with PayPal
+                        </button>
+                    </form>
+
+                    <!-- Credit Card (Stripe) Option -->
+                    <form asp-controller="Payment" asp-action="ProcessBorrowPayment" method="post">
+                        <input type="hidden" name="bookId" value="@ViewBag.BookId" />
+                        <input type="hidden" name="paymentMethod" value="stripe" />
+                        <button type="submit" class="btn btn-success btn-lg w-100">
+                            <i class="fas fa-credit-card"></i> Pay with Credit Card
+                        </button>
+                    </form>
+
+                    <!-- Cancel Button -->
+                    <div class="text-center mt-3">
+                        <a href="@Url.Action("Details", "Book", new { id = ViewBag.BookId })" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
